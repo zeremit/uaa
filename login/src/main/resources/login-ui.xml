@@ -313,6 +313,9 @@
   <bean id="approvalsService" class="org.cloudfoundry.identity.uaa.login.LoginUaaApprovalsService"/>
 
   <bean id="approvalsController" class="org.cloudfoundry.identity.uaa.login.ProfileController" />
+  <bean id="facebookController" class="org.cloudfoundry.identity.uaa.login.SignInController">
+      <property name="userDatabase" ref="userDatabase"/>
+  </bean>
 
     <util:map id="notifications" key-type="org.cloudfoundry.identity.uaa.login.MessageType">
         <entry key="CREATE_ACCOUNT_CONFIRMATION">
