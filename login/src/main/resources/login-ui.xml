@@ -152,12 +152,15 @@
                     <constructor-arg value="/login**" />
                 </bean>
                 <bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
+                    <constructor-arg value="/totp_qr_code**" />
+                </bean>
+                <bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
                     <constructor-arg value="/logout.do**" />
                 </bean>
             </list>
         </constructor-arg>
     </bean>
-
+    <bean id="qrGenerator" class="org.cloudfoundry.identity.uaa.authentication.login.TotpEndpoint"/>
 
 
     <bean id="loginCookieCsrfRepository" class="org.cloudfoundry.identity.uaa.web.CookieBasedCsrfTokenRepository"/>
@@ -193,7 +196,7 @@
                   login-processing-url="/login.do"
                   authentication-failure-handler-ref="loginAuthenticationFailureHandler"
                   authentication-details-source-ref="authenticationDetailsSource"
-                  default-target-url="/"/>
+                  default-target-url="/totp_qr_code"/>
       <!--<logout logout-url="/logout.do" success-handler-ref="logoutHandler" invalidate-session="true"/>-->
       <custom-filter ref="logoutFilter" before="LOGOUT_FILTER"/>
       <csrf disabled="false"  token-repository-ref="loginCookieCsrfRepository" request-matcher-ref="uiLoginRequestMatcher"/>

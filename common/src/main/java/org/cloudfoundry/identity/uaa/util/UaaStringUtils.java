@@ -218,4 +218,13 @@ public class UaaStringUtils {
         return result;
     }
 
+    public static boolean isInteger(String s) {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException e) {
+        }
+        return false;
+    }
+
 }
