@@ -24,9 +24,18 @@
     <th:block layout:include="nav :: nav"></th:block>
 </div>
 <div class="island" layout:fragment="page-content">
-    <h1>Scan This for Two Factor Authentication</h1>
+    <h1>Two Factor Authentication</h1>
     <div class="island-content">
-        <img th:src="${qrurl}" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQSaQLWAViMlpv-CF9OkUy_DtW7Z8ITVkgBH4dxBqfwKLlXQDNlsuvUayfK"/>
+        <th:block th:unless="${qrurl}">
+            <p>Click to generate new code</p>
+            <a th:href="@{/totp_qr_code.new}">
+                <img src="/resources/images/qr_placeholder.jpg" th:src="@{/resources/images/qr_placeholder.jpg}" role="presentation"/>
+            </a>
+        </th:block>
+        <th:block th:if="${qrurl}">
+            <p>Scan the QR barcode</p>
+            <img src="/resources/images/qr_placeholder.jpg"  th:src="${qrurl}"/>
+        </th:block>
         <br/>
         <br/>
         <br/>

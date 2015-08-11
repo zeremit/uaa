@@ -24,6 +24,7 @@ import org.cloudfoundry.identity.uaa.authentication.UaaPrincipal;
 import org.cloudfoundry.identity.uaa.util.UaaStringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -53,11 +54,20 @@ public class TotpEndpoint {
         return key;
     }
 
+    @RequestMapping(value = { "/totp_qr_code.new" }, method = RequestMethod.GET)
+    public String generateNewQrUrl(Model model, Principal principal) throws NoSuchAlgorithmException, IOException {
+        UaaPrincipal uaaPrincipal = (principal instanceof UaaAuthentication) ? ((UaaAuthentication)principal).getPrincipal() : null;
+        keys.remove(uaaPrincipal.getId());
+        return generateQrUrl(model, principal);
+    }
+
     @RequestMapping(value = { "/totp_qr_code" }, method = RequestMethod.GET)
     public String generateQrUrl(Model model, Principal principal) throws NoSuchAlgorithmException, IOException {
         UaaPrincipal uaaPrincipal = (principal instanceof UaaAuthentication) ? ((UaaAuthentication)principal).getPrincipal() : null;
-        String url = GoogleAuthenticatorQRGenerator.getOtpAuthURL("UAA", uaaPrincipal.getName(),createCredentials(uaaPrincipal.getId()));
-        model.addAttribute("qrurl", url);
+        if (keys.get(uaaPrincipal.getId())==null) {
+            String url = GoogleAuthenticatorQRGenerator.getOtpAuthURL("UAA", uaaPrincipal.getName(), createCredentials(uaaPrincipal.getId()));
+            model.addAttribute("qrurl", url);
+        }
         return "qr_code";
     }
 
@@ -68,11 +78,14 @@ public class TotpEndpoint {
         throws NoSuchAlgorithmException, IOException {
         UaaPrincipal uaaPrincipal = (principal instanceof UaaAuthentication) ? ((UaaAuthentication)principal).getPrincipal() : null;
         String error = null;
-        if (UaaStringUtils.isInteger(code)) {
+        if (!StringUtils.hasText(codes.get(uaaPrincipal.getId()))) {
+            error = "Please rescan the QR code.";
+            keys.remove(uaaPrincipal.getId());
+        } else if (UaaStringUtils.isInteger(code)) {
             if ( authenticator.authorizeUser(uaaPrincipal.getId(),Integer.valueOf(code))) {
                 return "home";
             } else {
-                error = "Invalid code";
+                error = "Invalid code.";
             }
         } else {
             error = "Code must be numeric.";
