@@ -1,25 +1,17 @@
 package org.cloudfoundry.identity.uaa.login;
 
-import org.apache.commons.ssl.Base64;
-import org.cloudfoundry.identity.uaa.authentication.Origin;
 import org.cloudfoundry.identity.uaa.authentication.UaaAuthentication;
 import org.cloudfoundry.identity.uaa.authentication.UaaPrincipal;
-import org.cloudfoundry.identity.uaa.authentication.event.UserAuthenticationSuccessEvent;
 import org.cloudfoundry.identity.uaa.scim.ScimUser;
 import org.cloudfoundry.identity.uaa.scim.ScimUserProvisioning;
 import org.cloudfoundry.identity.uaa.scim.exception.ScimResourceAlreadyExistsException;
-import org.cloudfoundry.identity.uaa.user.UaaAuthority;
 import org.cloudfoundry.identity.uaa.user.UaaUser;
 import org.cloudfoundry.identity.uaa.user.UaaUserDatabase;
-import org.cloudfoundry.identity.uaa.zone.IdentityZoneHolder;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -81,8 +73,7 @@ public class SignInController {
         UaaPrincipal result = new UaaPrincipal(uaaUser);
         Authentication authentication = new UaaAuthentication(result, uaaUser.getAuthorities(), null);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        return "home";
+        return "redirect:/home";
     }
 
     public void setUserDatabase(UaaUserDatabase userDatabase) {

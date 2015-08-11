@@ -146,6 +146,9 @@
                     <constructor-arg value="/oauth/**" />
                 </bean>
                 <bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
+                    <constructor-arg value="/signin/**" />
+                </bean>
+                <bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
                     <constructor-arg value="/login**" />
                 </bean>
                 <bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
@@ -181,6 +184,8 @@
     <http name="uiSecurity" request-matcher-ref="uiRequestMatcher" use-expressions="false"
           authentication-manager-ref="zoneAwareAuthzAuthenticationManager" xmlns="http://www.springframework.org/schema/security">
       <intercept-url pattern="/login**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+      <intercept-url pattern="/signin/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+      <intercept-url pattern="/oauth/facebook" access="IS_AUTHENTICATED_ANONYMOUSLY" />
       <intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" />
       <form-login login-page="/login"
                   username-parameter="username"
