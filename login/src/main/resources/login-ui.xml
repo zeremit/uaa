@@ -189,6 +189,7 @@
       <intercept-url pattern="/login**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
       <intercept-url pattern="/signin/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
       <intercept-url pattern="/oauth/facebook" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+      <intercept-url pattern="/oauth/github" access="IS_AUTHENTICATED_ANONYMOUSLY" />
       <intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" />
       <form-login login-page="/login"
                   username-parameter="username"
