@@ -28,6 +28,7 @@ import org.cloudfoundry.identity.uaa.scim.exception.ScimResourceNotFoundExceptio
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.web.savedrequest.SavedRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,6 +38,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.View;
 
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -83,25 +85,31 @@ public class PasswordResetEndpoint {
     }
 
     @RequestMapping(value = "/password_change", method = RequestMethod.POST)
-    public ResponseEntity<Map<String,String>> changePassword(@RequestBody PasswordReset passwordReset) {
+    public ResponseEntity<Map<String,String>> changePassword(@RequestBody PasswordReset passwordReset, HttpSession session) {
         ResponseEntity<Map<String,String>> responseEntity;
         if (passwordReset.getCode() != null) {
-            responseEntity = resetPassword(passwordReset.getCode(), passwordReset.getNewPassword());
+            SavedRequest springSecuritySavedRequest = (SavedRequest) session.getAttribute("SPRING_SECURITY_SAVED_REQUEST");
+            String redirectUrl = null;
+            if (springSecuritySavedRequest != null && springSecuritySavedRequest.getRedirectUrl() != null) {
+                redirectUrl = springSecuritySavedRequest.getRedirectUrl();
+            }
+            responseEntity = changePassword(passwordReset.getCode(), passwordReset.getNewPassword(), redirectUrl);
         } else {
             responseEntity = new ResponseEntity<>(BAD_REQUEST);
         }
         return responseEntity;
     }
 
-    private ResponseEntity<Map<String, String>> resetPassword(String code, String newPassword) {
+    private ResponseEntity<Map<String, String>> changePassword(String code, String newPassword, String redirectUrl) {
         try {
             ResetPasswordResponse response = resetPasswordService.resetPassword(code, newPassword);
             ScimUser user = response.getUser();
-            Map<String, String> userInfo = new HashMap<>();
-            userInfo.put("user_id", user.getId());
-            userInfo.put("username", user.getUserName());
-            userInfo.put("email", user.getPrimaryEmail());
-            return new ResponseEntity<>(userInfo, OK);
+            Map<String, String> responseBody = new HashMap<>();
+            responseBody.put("user_id", user.getId());
+            responseBody.put("username", user.getUserName());
+            responseBody.put("email", user.getPrimaryEmail());
+            responseBody.put("redirect_uri", redirectUrl);
+            return new ResponseEntity<>(responseBody, OK);
         } catch (BadCredentialsException e) {
             return new ResponseEntity<>(UNAUTHORIZED);
         } catch (ScimResourceNotFoundException e) {

@@ -22,10 +22,12 @@ import org.cloudfoundry.identity.uaa.test.TestClient;
 import org.cloudfoundry.identity.uaa.util.JsonUtils;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.oauth2.common.util.RandomValueStringGenerator;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
+import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -158,6 +160,20 @@ public class PasswordResetEndpointMockMvcTests extends InjectedMockContextTest {
             .andExpect(status().isUnprocessableEntity())
             .andExpect(jsonPath("$.error").value("invalid_password"))
             .andExpect(jsonPath("$.message").value("Your new password cannot be the same as the old password."));
+    }
+
+    @Test
+    public void changePassword_ReturnsSavedRequestParameters_IfPresent() throws Exception {
+        MockHttpSession session = MockMvcUtils.utils().getSavedRequestSession();
+        String code = getExpiringCode(null, null);
+
+        getMockMvc().perform(post("/password_change")
+                .session(session)
+                .header("Authorization", "Bearer " + loginToken)
+                .contentType(APPLICATION_JSON)
+                .content("{\"code\":\"" + code + "\",\"new_password\":\"what3v3r\"}"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.redirect_uri").value("http://test/redirect/oauth/authorize"));
     }
 
     private String getExpiringCode(String clientId, String redirectUri) throws Exception {
