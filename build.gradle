@@ -217,7 +217,6 @@ cargo {
 
   local {
     systemProperties {
-//      property 'net.sourceforge.cobertura.datafile', integrationCoverageFile
       property 'spring.profiles.active', System.getProperty('spring.profiles.active', 'default')
     }
 
