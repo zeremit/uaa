@@ -66,6 +66,7 @@ dependencies {
   }
   providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version:parent.servletVersion
   providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'
+  testCompile group: 'org.springframework.restdocs', name: 'spring-restdocs-mockmvc', version: '1.0.0.RELEASE'
   testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'2.42.2'
   testCompile(group: 'com.github.detro.ghostdriver', name: 'phantomjsdriver', version:'1.1.0') {
     exclude(module: 'servlet-api-2.5')
@@ -86,4 +87,18 @@ integrationTest {
     includeTestsMatching "org.cloudfoundry.identity.uaa.integration.*"
     includeTestsMatching "*IT"
   }
+}
+
+ext {
+  snippetsDir = file('build/generated-snippets')
+}
+
+test {
+  outputs.dir snippetsDir
+}
+
+asciidoctor {
+  attributes 'snippets': snippetsDir
+  inputs.dir snippetsDir
+  dependsOn test
 }
