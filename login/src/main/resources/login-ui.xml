@@ -431,6 +431,7 @@
 
     <context:annotation-config />
     <bean id="loginServerConfig" class="org.cloudfoundry.identity.uaa.login.LoginServerConfig" />
+    <bean id="springfixSwaggerConfig" class="org.cloudfoundry.identity.uaa.config.SpringFoxSwaggerConfig" />
 
     <bean name="invitationsController" class="org.cloudfoundry.identity.uaa.invitations.InvitationsController">
         <constructor-arg name="invitationsService" ref="invitationsService"/>

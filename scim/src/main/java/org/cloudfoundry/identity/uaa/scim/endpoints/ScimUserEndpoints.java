@@ -12,6 +12,10 @@
  *******************************************************************************/
 package org.cloudfoundry.identity.uaa.scim.endpoints;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
+import io.swagger.annotations.AuthorizationScope;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.cloudfoundry.identity.uaa.codestore.ExpiringCode;
@@ -94,6 +98,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Controller
 @ManagedResource
+@Api
 public class ScimUserEndpoints implements InitializingBean {
     private static final String USER_APPROVALS_FILTER_TEMPLATE = "user_id eq \"%s\"";
 
@@ -171,6 +176,7 @@ public class ScimUserEndpoints implements InitializingBean {
         return errorCounts;
     }
 
+    @ApiOperation(value = "Get the user specified by userId", authorizations = @Authorization(value = "scimReaderAuth", scopes = { @AuthorizationScope(description = "scim.read", scope = "scim.read")}))
     @RequestMapping(value = "/Users/{userId}", method = RequestMethod.GET)
     @ResponseBody
     public ScimUser getUser(@PathVariable String userId, HttpServletResponse httpServletResponse) {
@@ -179,6 +185,7 @@ public class ScimUserEndpoints implements InitializingBean {
         return scimUser;
     }
 
+    @ApiOperation("Create a new user")
     @RequestMapping(value = "/Users", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
@@ -201,6 +208,7 @@ public class ScimUserEndpoints implements InitializingBean {
         return scimUser;
     }
 
+    @ApiOperation("Updates a user")
     @RequestMapping(value = "/Users/{userId}", method = RequestMethod.PUT)
     @ResponseBody
     public ScimUser updateUser(@RequestBody ScimUser user, @PathVariable String userId,

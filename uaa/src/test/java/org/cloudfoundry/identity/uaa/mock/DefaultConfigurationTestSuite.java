@@ -27,6 +27,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
+import javax.servlet.Filter;
 import java.util.Arrays;
 import java.util.Comparator;
 

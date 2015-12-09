@@ -34,6 +34,10 @@ dependencies {
   compile group: 'org.springframework', name: 'spring-tx', version:parent.springVersion
   compile group: 'org.springframework.security', name: 'spring-security-core', version:parent.springSecurityVersion
   compile group: 'org.springframework.security', name: 'spring-security-web', version:parent.springSecurityVersion
+
+  compile 'io.springfox:springfox-swagger2:2.3.0'
+  compile 'io.springfox:springfox-swagger-ui:2.3.0'
+
   compile group: 'log4j', name: 'log4j', version:'1.2.17'
   compile(group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.3.3') {
     exclude(module: 'commons-logging')
