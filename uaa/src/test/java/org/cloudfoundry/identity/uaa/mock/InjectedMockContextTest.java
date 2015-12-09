@@ -19,11 +19,12 @@ import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import static org.junit.Assume.assumeTrue;
 
-public class InjectedMockContextTest implements Contextable {
+public class InjectedMockContextTest implements Contextable, MockMvcConfigurer {
 
     @ClassRule
     public static SkipWhenNotRunningInSuiteRule skip = new SkipWhenNotRunningInSuiteRule();
@@ -50,7 +51,7 @@ public class InjectedMockContextTest implements Contextable {
             return;
         }
 
-        Object[] stuff = DefaultConfigurationTestSuite.setUpContext();
+        Object[] stuff = DefaultConfigurationTestSuite.setUpContext(this);
         mustDestroy = true;
         webApplicationContext = (XmlWebApplicationContext)stuff[0];
         mockMvc = (MockMvc)stuff[1];
@@ -71,6 +72,11 @@ public class InjectedMockContextTest implements Contextable {
     public void inject(XmlWebApplicationContext context, MockMvc mockMvc) {
         this.webApplicationContext = context;
         this.mockMvc = mockMvc;
+    }
+
+    @Override
+    public void configure(ConfigurableMockMvcBuilder mockMvcBuilder) {
+        // do nothing
     }
 
     public static class SkipWhenNotRunningInSuiteRule implements TestRule {

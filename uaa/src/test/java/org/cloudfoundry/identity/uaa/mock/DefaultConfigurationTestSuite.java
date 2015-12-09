@@ -21,6 +21,7 @@ import org.springframework.mock.env.MockEnvironment;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.XmlWebApplicationContext;
@@ -56,9 +57,9 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
 
     @BeforeClass
     public static void setUpContextVoid() throws Exception {
-        setUpContext();
+        setUpContext(configurer -> {});
     }
-    public static Object[] setUpContext() throws Exception {
+    public static Object[] setUpContext(MockMvcConfigurer configurer) throws Exception {
         clearDatabase();
         webApplicationContext = new XmlWebApplicationContext();
         MockEnvironment mockEnvironment = new MockEnvironment();
@@ -72,9 +73,10 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
         webApplicationContext.refresh();
         webApplicationContext.registerShutdownHook();
         FilterChainProxy springSecurityFilterChain = webApplicationContext.getBean("springSecurityFilterChain", FilterChainProxy.class);
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
-            .addFilter(springSecurityFilterChain)
-            .build();
+        ConfigurableMockMvcBuilder builder = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+            .addFilter(springSecurityFilterChain);
+        configurer.configure(builder);
+        mockMvc = builder.build();
         return new Object[] {webApplicationContext, mockMvc};
     }
 
