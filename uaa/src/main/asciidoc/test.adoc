@@ -1,0 +1,37 @@
+= UAA API Docs
+Paul Warren, Jonathan Lo;
+:doctype: book
+:toc:
+:sectanchors:
+:sectlinks:
+:toclevels: 4
+:source-highlighter: highlightjs
+
+[[overview]]
+= Overview
+
+A demonstration of Spring RESTDOCS.
+
+= Zone Management
+== Create an Identity Zone
+
+An identity zone is created using a POST with an IdentityZone object.  If the object contains an id, this id will be used as the identifier, otherwise an identifier will be generated. Once
+a zone has been created, UAA will start accepting requests on the subdomain defined in the subdomain field of the identity zone.  When an Identity Zone is created, an internal Identity Provider
+is automatically created with the default password policy.
+
+POST requires the zones.write or zones.<zone id>.admin scope.
+
+=== Request
+include::{snippets}/createZone/http-request.adoc[]
+
+=== Request Fields
+include::{snippets}/createZone/request-fields.adoc[]
+
+=== Response
+include::{snippets}/createZone/http-response.adoc[]
+
+=== Response Fields
+include::{snippets}/createZone/response-fields.adoc[]
+
+=== Curl Example
+include::{snippets}/createZone/curl-request.adoc[]

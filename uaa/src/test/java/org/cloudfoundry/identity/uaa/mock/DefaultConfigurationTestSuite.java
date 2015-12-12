@@ -26,7 +26,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
-import javax.servlet.Filter;
 import java.util.Arrays;
 
 @RunWith(UaaJunitSuiteRunner.class)
@@ -45,7 +44,6 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
 
     public DefaultConfigurationTestSuite() {
     }
-
 
     public static void clearDatabase() throws Exception {
         webApplicationContext = new XmlWebApplicationContext();
