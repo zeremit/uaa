@@ -30,6 +30,7 @@ import java.util.Arrays;
 
 @RunWith(UaaJunitSuiteRunner.class)
 public class DefaultConfigurationTestSuite extends UaaBaseSuite {
+
     private static XmlWebApplicationContext webApplicationContext;
     private static MockMvc mockMvc;
 
@@ -82,10 +83,12 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
 
     @AfterClass
     public static void destroyMyContext() throws Exception {
-        webApplicationContext.getBean(Flyway.class).clean();
-        webApplicationContext.destroy();
-        webApplicationContext = null;
-        mockMvc = null;
+        if (webApplicationContext != null) {
+            webApplicationContext.getBean(Flyway.class).clean();
+            webApplicationContext.destroy();
+            webApplicationContext = null;
+            mockMvc = null;
+        }
     }
 
 }

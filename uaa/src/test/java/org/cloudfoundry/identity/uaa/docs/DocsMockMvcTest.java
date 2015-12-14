@@ -1,33 +1,24 @@
 package org.cloudfoundry.identity.uaa.docs;
 
-import org.cloudfoundry.identity.uaa.audit.AuditEventType;
+import org.cloudfoundry.identity.uaa.mock.DefaultConfigurationTestSuite;
 import org.cloudfoundry.identity.uaa.mock.InjectedMockContextTest;
 import org.cloudfoundry.identity.uaa.test.TestClient;
 import org.cloudfoundry.identity.uaa.util.JsonUtils;
-import org.cloudfoundry.identity.uaa.zone.IdentityZone;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.restdocs.RestDocumentation;
 import org.springframework.restdocs.payload.JsonFieldType;
 import org.springframework.restdocs.snippet.Snippet;
 import org.springframework.security.oauth2.common.util.RandomValueStringGenerator;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.util.StringUtils;
-import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
@@ -37,9 +28,7 @@ import static org.springframework.restdocs.operation.preprocess.Preprocessors.pr
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.requestFields;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /*******************************************************************************
@@ -61,18 +50,31 @@ public class DocsMockMvcTest extends InjectedMockContextTest {
     public final RestDocumentation restDocumentation = new RestDocumentation("build/generated-snippets");
 
     private MockMvc mockMvc;
+    private XmlWebApplicationContext webApplicationContext;
 
-//    @Override
-//    public void configure(ConfigurableMockMvcBuilder mockMvcBuilder) {
-//        mockMvcBuilder.apply(documentationConfiguration(this.restDocumentation))
-//                .alwaysDo(document("{method-name}/{step}/",preprocessRequest(prettyPrint()),preprocessResponse(prettyPrint())));
-//    }
-//
+    @Override
+    public void configure(ConfigurableMockMvcBuilder mockMvcBuilder) {
+        mockMvcBuilder.apply(documentationConfiguration(this.restDocumentation))
+                .alwaysDo(document("{method-name}/{step}/",preprocessRequest(prettyPrint()),preprocessResponse(prettyPrint())));
+    }
+
     @Before
-    public void setUp() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(getWebApplicationContext())
-                .apply(documentationConfiguration(this.restDocumentation))
-                .build();
+    public void setUp() throws Exception {
+        // save existing context, if any
+        webApplicationContext = getWebApplicationContext();
+        mockMvc = getMockMvc();
+
+        // init a new context (that includes restdocs)
+        this.inject(null, null);
+        this.initContextIfWeNeedIt();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        DefaultConfigurationTestSuite.destroyMyContext();
+
+        // re-inject the save context
+        this.inject(webApplicationContext, mockMvc);
     }
 
     @Test
