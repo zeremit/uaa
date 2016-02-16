@@ -14,20 +14,33 @@ package org.cloudfoundry.identity.uaa.mock;
 
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
+import org.springframework.restdocs.JUnitRestDocumentation;
+import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import static org.junit.Assume.assumeTrue;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
 
-public class InjectedMockContextTest implements Contextable, MockMvcConfigurer {
+public class InjectedMockContextTest implements Contextable {
 
     @ClassRule
     public static SkipWhenNotRunningInSuiteRule skip = new SkipWhenNotRunningInSuiteRule();
+
+    @Rule
+    public final JUnitRestDocumentation restDocumentation = new JUnitRestDocumentation("build/generated-snippets");
 
     private static XmlWebApplicationContext webApplicationContext;
     private static MockMvc mockMvc;
@@ -45,17 +58,31 @@ public class InjectedMockContextTest implements Contextable, MockMvcConfigurer {
         return mustDestroy;
     }
 
+//    @BeforeClass
+//    public static void initContext() throws Exception {
+//        Object[] setUpContext = DefaultConfigurationTestSuite.setUpContext();
+//        webApplicationContext = (XmlWebApplicationContext) setUpContext[0];
+//        mustDestroy = true;
+//    }
+
     @Before
     public void initContextIfWeNeedIt() throws Exception {
         if (getWebApplicationContext() != null) {
             return;
         }
 
-        Object[] stuff = DefaultConfigurationTestSuite.setUpContext(this);
+        Object[] stuff = DefaultConfigurationTestSuite.setUpContext();
         mustDestroy = true;
-        webApplicationContext = (XmlWebApplicationContext)stuff[0];
-        mockMvc = (MockMvc)stuff[1];
+        webApplicationContext = (XmlWebApplicationContext) stuff[0];
+//        mockMvc = (MockMvc) stuff[1];
 
+        FilterChainProxy springSecurityFilterChain = webApplicationContext.getBean("springSecurityFilterChain", FilterChainProxy.class);
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+                .addFilter(springSecurityFilterChain)
+                .apply(documentationConfiguration(this.restDocumentation))
+                .alwaysDo(document("{method-name}/{step}/",
+                        preprocessRequest(prettyPrint()),
+                        preprocessResponse(prettyPrint()))).build();
     }
 
     @AfterClass
@@ -68,16 +95,28 @@ public class InjectedMockContextTest implements Contextable, MockMvcConfigurer {
         mustDestroy = false;
     }
 
+//    public MockMvc generateDocs() {
+//        FilterChainProxy springSecurityFilterChain = webApplicationContext.getBean("springSecurityFilterChain", FilterChainProxy.class);
+//        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+//                .addFilter(springSecurityFilterChain)
+//                .apply(documentationConfiguration(this.restDocumentation))
+////                .alwaysDo(document("{method-name}/{step}/",
+////                        preprocessRequest(prettyPrint()),
+////                        preprocessResponse(prettyPrint())))
+//                .build();
+//        return mockMvc;
+//    }
+
     @Override
     public void inject(XmlWebApplicationContext context, MockMvc mockMvc) {
         this.webApplicationContext = context;
         this.mockMvc = mockMvc;
     }
 
-    @Override
-    public void configure(ConfigurableMockMvcBuilder mockMvcBuilder) {
-        // do nothing
-    }
+//    @Override
+//    public void configure(ConfigurableMockMvcBuilder mockMvcBuilder) {
+//        // do nothing
+//    }
 
     public static class SkipWhenNotRunningInSuiteRule implements TestRule {
         @Override

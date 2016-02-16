@@ -39,24 +39,23 @@ public class Docs extends InjectedMockContextTest {
 
     private MockMvc mockMvc = null;
 
-    @Rule
-    public final RestDocumentation restDocumentation = new RestDocumentation("build/generated-snippets");
+//    @Rule
+//    public final RestDocumentation restDocumentation = new RestDocumentation("build/generated-snippets");
 
-    @Before
-    public void setUp() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.getWebApplicationContext())
-                .apply(documentationConfiguration(this.restDocumentation))
-                .alwaysDo(document("{method-name}/{step}/",
-                        preprocessRequest(prettyPrint()),
-                        preprocessResponse(prettyPrint())))
-                .build();
-    }
+//    @Before
+//    public void setUp() {
+//        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.getWebApplicationContext())
+//                .apply(documentationConfiguration(this.restDocumentation))
+//                .alwaysDo(document("{method-name}/{step}/",
+//                        preprocessRequest(prettyPrint()),
+//                        preprocessResponse(prettyPrint())))
+//                .build();
+//    }
 
     @Test
     public void testHealthz() throws Exception {
-        this.mockMvc.perform(get("/").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andDo(document("index"));
+        getMockMvc().perform(get("/healthz").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
 
 }

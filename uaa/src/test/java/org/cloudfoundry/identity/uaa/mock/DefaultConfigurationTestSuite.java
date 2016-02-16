@@ -16,9 +16,11 @@ import org.cloudfoundry.identity.uaa.test.YamlServletProfileInitializerContextIn
 import org.flywaydb.core.Flyway;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.runner.RunWith;
 import org.springframework.mock.env.MockEnvironment;
 import org.springframework.mock.web.MockServletContext;
+import org.springframework.restdocs.JUnitRestDocumentation;
 import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.ConfigurableMockMvcBuilder;
@@ -28,10 +30,19 @@ import org.springframework.web.context.support.XmlWebApplicationContext;
 
 import java.util.Arrays;
 
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessResponse;
+import static org.springframework.restdocs.operation.preprocess.Preprocessors.prettyPrint;
+
 @RunWith(UaaJunitSuiteRunner.class)
 public class DefaultConfigurationTestSuite extends UaaBaseSuite {
     private static XmlWebApplicationContext webApplicationContext;
     private static MockMvc mockMvc;
+
+//    @Rule
+//    public static final JUnitRestDocumentation restDocumentation = new JUnitRestDocumentation("build/generated-snippets");
 
     public static Class<?>[] suiteClasses() {
         Class<?>[] result = UaaJunitSuiteRunner.allSuiteClasses();
@@ -45,7 +56,6 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
     public DefaultConfigurationTestSuite() {
     }
 
-
     public static void clearDatabase() throws Exception {
         webApplicationContext = new XmlWebApplicationContext();
         webApplicationContext.setEnvironment(new MockEnvironment());
@@ -57,9 +67,10 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
 
     @BeforeClass
     public static void setUpContextVoid() throws Exception {
-        setUpContext(configurer -> {});
+        setUpContext();
     }
-    public static Object[] setUpContext(MockMvcConfigurer configurer) throws Exception {
+
+    public static Object[] setUpContext() throws Exception {
         clearDatabase();
         webApplicationContext = new XmlWebApplicationContext();
         MockEnvironment mockEnvironment = new MockEnvironment();
@@ -73,11 +84,11 @@ public class DefaultConfigurationTestSuite extends UaaBaseSuite {
         webApplicationContext.refresh();
         webApplicationContext.registerShutdownHook();
         FilterChainProxy springSecurityFilterChain = webApplicationContext.getBean("springSecurityFilterChain", FilterChainProxy.class);
-        ConfigurableMockMvcBuilder builder = MockMvcBuilders.webAppContextSetup(webApplicationContext)
-            .addFilter(springSecurityFilterChain);
-        configurer.configure(builder);
-        mockMvc = builder.build();
-        return new Object[] {webApplicationContext, mockMvc};
+//        ConfigurableMockMvcBuilder builder = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+//            .addFilter(springSecurityFilterChain);
+//            .apply(documentationConfiguration(restDocumentation));
+//        mockMvc = builder.build();
+        return new Object[] {webApplicationContext, null};
     }
 
     @AfterClass
