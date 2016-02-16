@@ -56,6 +56,7 @@ public class Docs extends InjectedMockContextTest {
     public void testHealthz() throws Exception {
         getMockMvc().perform(get("/healthz").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+//                 .andDo(document("index"));
     }
 
 }

@@ -41,6 +41,7 @@ dependencies {
   runtime group: 'javax.servlet', name: 'jstl', version:parent.jstlVersion
   runtime group: 'postgresql', name: 'postgresql', version:parent.postgresqlVersion
   providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: parent.servletVersion
+  providedCompile group: 'javax.servlet.jsp', name: 'jsp-api', version:'2.1'
 
   testCompile identityServer.configurations.testCompile.dependencies
   testCompile identityServer.sourceSets.test.output
