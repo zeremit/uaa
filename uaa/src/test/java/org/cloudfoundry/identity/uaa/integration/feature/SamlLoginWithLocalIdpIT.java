@@ -13,6 +13,7 @@
 package org.cloudfoundry.identity.uaa.integration.feature;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+
 import org.apache.commons.lang.StringUtils;
 import org.cloudfoundry.identity.uaa.ServerRunning;
 import org.cloudfoundry.identity.uaa.constants.OriginKeys;
@@ -162,7 +163,7 @@ public class SamlLoginWithLocalIdpIT {
     @Test
     public void testCreateSamlSp() throws Exception {
         SamlServiceProviderDefinition spDef = createLocalSamlSpDefinition("cloudfoundry-saml-login", "uaa");
-        createSamlServiceProvider("Local SAML SP", "unit-test-sp", baseUrl, serverRunning, spDef);
+        createSamlServiceProvider("Local SAML SP", "cloudfoundry-saml-login", baseUrl, serverRunning, spDef);
     }
 
     public static SamlServiceProviderDefinition createLocalSamlSpDefinition(String alias, String zoneId) {
@@ -183,12 +184,6 @@ public class SamlLoginWithLocalIdpIT {
 
         String spMetaData = metadataResponse.getBody();
         SamlServiceProviderDefinition def = new SamlServiceProviderDefinition();
-        def.setZoneId(zoneId);
-        if (StringUtils.isNotEmpty(zoneId) && !zoneId.equals("uaa")) {
-            def.setSpEntityId(zoneId + "." + alias);
-        } else {
-            def.setSpEntityId(alias);
-        }
         def.setMetaDataLocation(spMetaData);
         def.setNameID("urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress");
         def.setSingleSignOnServiceIndex(0);
@@ -222,7 +217,7 @@ public class SamlLoginWithLocalIdpIT {
         provider.setConfig(samlServiceProviderDefinition);
         provider.setIdentityZoneId(OriginKeys.UAA);
         provider.setActive(true);
-        provider.setEntityId(samlServiceProviderDefinition.getSpEntityId());
+        provider.setEntityId(entityId);
         provider.setName(name);
         provider = createOrUpdateSamlServiceProvider(zoneAdminToken, baseUrl, provider);
         assertNotNull(provider.getId());
@@ -364,7 +359,7 @@ public class SamlLoginWithLocalIdpIT {
         sp.setIdentityZoneId(zoneId);
         sp.setActive(true);
         sp.setConfig(samlServiceProviderDefinition);
-        sp.setEntityId(samlServiceProviderDefinition.getSpEntityId());
+        sp.setEntityId("testzone1.cloudfoundry-saml-login");
         sp.setName("Local SAML SP for testzone1");
         sp = createOrUpdateSamlServiceProvider(zoneAdminToken, baseUrl, sp);
 
@@ -471,7 +466,7 @@ public class SamlLoginWithLocalIdpIT {
         sp.setIdentityZoneId(idpZoneId);
         sp.setActive(true);
         sp.setConfig(samlServiceProviderDefinition);
-        sp.setEntityId(samlServiceProviderDefinition.getSpEntityId());
+        sp.setEntityId("testzone2.cloudfoundry-saml-login");
         sp.setName("Local SAML SP for testzone2");
         sp = createOrUpdateSamlServiceProvider(idpZoneAdminToken, baseUrl, sp);
 
