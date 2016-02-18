@@ -420,7 +420,8 @@
 
     <context:annotation-config />
     <bean id="loginServerConfig" class="org.cloudfoundry.identity.uaa.impl.LoginServerConfig" />
-
+	<bean id="apiDocumentationConfig" class="org.cloudfoundry.identity.uaa.springfox.ApiDocumentationConfiguration" />
+    
     <bean name="invitationsController" class="org.cloudfoundry.identity.uaa.invitations.InvitationsController">
         <constructor-arg name="invitationsService" ref="invitationsService"/>
         <property name="spEntityID" ref="samlEntityID"/>

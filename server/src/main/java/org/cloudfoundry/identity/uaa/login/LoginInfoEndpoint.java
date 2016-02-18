@@ -52,6 +52,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
@@ -87,6 +90,7 @@ import static org.springframework.util.StringUtils.hasText;
  * @author Dave Syer
  */
 @Controller
+@Api
 public class LoginInfoEndpoint {
 
     public static final String NotANumber = OriginKeys.NotANumber;
@@ -172,6 +176,7 @@ public class LoginInfoEndpoint {
         }
     }
 
+    @ApiOperation(value = "loginJson", nickname = "loginJson")
     @RequestMapping(value = {"/login"}, headers = "Accept=application/json")
     public String loginForJson(Model model, Principal principal) {
         return login(model, principal, Collections.<String>emptyList(), true);
@@ -187,6 +192,7 @@ public class LoginInfoEndpoint {
         return login(model, principal, Arrays.asList(PASSCODE), false);
     }
 
+    @ApiOperation(value = "loginHtml", nickname = "loginHtml")
     @RequestMapping(value = {"/login"}, headers = "Accept=text/html, */*")
     public String loginForHtml(Model model, Principal principal, HttpServletRequest request) {
         return login(model, principal, Arrays.asList(PASSCODE), false, request);

@@ -66,6 +66,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.View;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.security.SecureRandom;
@@ -80,7 +83,10 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
+import io.swagger.annotations.AuthorizationScope;
 /**
  * User provisioning and query endpoints. Implements the core API from the
  * Simple Cloud Identity Management (SCIM)
@@ -94,6 +100,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Controller
 @ManagedResource
+@Api
 public class ScimUserEndpoints implements InitializingBean {
     private static final String USER_APPROVALS_FILTER_TEMPLATE = "user_id eq \"%s\"";
 
@@ -171,6 +178,7 @@ public class ScimUserEndpoints implements InitializingBean {
         return errorCounts;
     }
 
+    @ApiOperation(value = "Get the user specified by userId", authorizations = @Authorization(value = "scimReaderAuth", scopes = { @AuthorizationScope(description = "scim.read", scope = "scim.read")}))
     @RequestMapping(value = "/Users/{userId}", method = RequestMethod.GET)
     @ResponseBody
     public ScimUser getUser(@PathVariable String userId, HttpServletResponse httpServletResponse) {
@@ -179,6 +187,7 @@ public class ScimUserEndpoints implements InitializingBean {
         return scimUser;
     }
 
+    @ApiOperation("Create a new user")
     @RequestMapping(value = "/Users", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
@@ -201,6 +210,7 @@ public class ScimUserEndpoints implements InitializingBean {
         return scimUser;
     }
 
+    @ApiOperation("Updates a user")
     @RequestMapping(value = "/Users/{userId}", method = RequestMethod.PUT)
     @ResponseBody
     public ScimUser updateUser(@RequestBody ScimUser user, @PathVariable String userId,

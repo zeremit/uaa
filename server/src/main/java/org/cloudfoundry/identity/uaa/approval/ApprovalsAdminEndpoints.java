@@ -46,6 +46,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.View;
 
+import io.swagger.annotations.ApiOperation;
+
 @Controller
 public class ApprovalsAdminEndpoints implements InitializingBean, ApprovalsControllerService {
 
@@ -88,6 +90,7 @@ public class ApprovalsAdminEndpoints implements InitializingBean, ApprovalsContr
         this.userDatabase = userDatabase;
     }
 
+    @ApiOperation(value = "doStuff", nickname = "doStuff")
     @RequestMapping(value = "/approvals", method = RequestMethod.GET)
     @ResponseBody
     @Override

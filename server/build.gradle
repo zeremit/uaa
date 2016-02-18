@@ -5,7 +5,7 @@ Project identityModel = parent.subprojects.find { it.name.equals('cloudfoundry-i
 dependencies {
 
   compile(identityModel)
-
+  
   provided group: 'javax.servlet', name: 'javax.servlet-api', version: parent.servletVersion
   compile group: 'javax.mail', name: 'mail', version: parent.javamailVersion
 
@@ -57,6 +57,10 @@ dependencies {
 
   compile group: 'org.passay', name: 'passay', version: parent.passayVersion
 
+  compile group: 'com.google.guava', name: 'guava', version: '14.0'
+  compile "io.springfox:springfox-swagger2:2.1.1"
+  compile "io.springfox:springfox-swagger-ui:2.1.1"
+  
   testCompile group: 'org.springframework', name: 'spring-test', version: parent.springVersion
   testCompile (group: 'junit', name: 'junit', version: parent.junitVersion) {
     exclude(module: 'hamcrest-core')
