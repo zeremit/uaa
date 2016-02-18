@@ -12,6 +12,7 @@
  *******************************************************************************/
 package org.cloudfoundry.identity.uaa.zone;
 
+import io.swagger.annotations.Api;
 import org.cloudfoundry.identity.uaa.constants.OriginKeys;
 import org.cloudfoundry.identity.uaa.error.UaaException;
 import org.cloudfoundry.identity.uaa.audit.event.EntityDeletedEvent;
@@ -65,6 +66,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
 @RestController
 @RequestMapping("/identity-zones")
+@Api
 public class IdentityZoneEndpoints implements ApplicationEventPublisherAware {
 
     @Autowired

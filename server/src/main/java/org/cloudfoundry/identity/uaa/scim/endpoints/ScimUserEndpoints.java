@@ -12,6 +12,7 @@
  *******************************************************************************/
 package org.cloudfoundry.identity.uaa.scim.endpoints;
 
+import io.swagger.annotations.Api;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.cloudfoundry.identity.uaa.codestore.ExpiringCode;
@@ -94,6 +95,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Controller
 @ManagedResource
+@Api
 public class ScimUserEndpoints implements InitializingBean {
     private static final String USER_APPROVALS_FILTER_TEMPLATE = "user_id eq \"%s\"";
 

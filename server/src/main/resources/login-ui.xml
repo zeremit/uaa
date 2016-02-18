@@ -111,6 +111,16 @@
        <custom-filter ref="acceptInvitationSecurityContextPersistenceFilter" before="FIRST"/>
     </http>
 
+    <http name="docsSecurity"
+          entry-point-ref="loginEntryPoint"
+          use-expressions="false"
+          pattern="/v2/api-docs"
+          xmlns="http://www.springframework.org/schema/security">
+        <access-denied-handler ref="loginEntryPoint"/>
+        <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+        <csrf disabled="true"/>
+    </http>
+
     <http name="invitationsEndpointSecurity"
           entry-point-ref="oauthAuthenticationEntryPoint"
           use-expressions="true"

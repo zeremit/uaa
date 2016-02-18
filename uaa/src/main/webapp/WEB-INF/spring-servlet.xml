@@ -301,6 +301,8 @@
       </property>
     </bean>
 
+    <bean id="springFoxSwaggerConfig" class="org.cloudfoundry.identity.uaa.config.SpringFoxSwaggerConfig" />
+
     <authentication-manager id="emptyAuthenticationManager" xmlns="http://www.springframework.org/schema/security" />
 
     <bean id="authenticationDetailsSource" class="org.cloudfoundry.identity.uaa.authentication.UaaAuthenticationDetailsSource" />

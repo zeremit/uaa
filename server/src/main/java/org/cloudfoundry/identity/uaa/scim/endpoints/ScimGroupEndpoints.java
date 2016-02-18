@@ -12,6 +12,7 @@
  *******************************************************************************/
 package org.cloudfoundry.identity.uaa.scim.endpoints;
 
+import io.swagger.annotations.Api;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.cloudfoundry.identity.uaa.constants.OriginKeys;
@@ -65,6 +66,7 @@ import java.util.Map;
 import static org.cloudfoundry.identity.uaa.zone.ZoneManagementScopes.ZONE_MANAGING_SCOPE_REGEX;
 
 @Controller
+@Api
 public class ScimGroupEndpoints {
 
     public static final String E_TAG = "ETag";
