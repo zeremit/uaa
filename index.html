@@ -4,94 +4,21 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>UAA API Guide</title>
+    <title>UAA API Reference</title>
 
-    <style>
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #f8f8f2;
-  background-color: #272822;
-}
-.highlight .err {
-  color: #151515;
-  background-color: #ac4142;
-}
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #505050;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
-.highlight .o, .highlight .ow {
-  color: #d0d0d0;
-}
-.highlight .p, .highlight .pi {
-  color: #d0d0d0;
-}
-.highlight .gi {
-  color: #90a959;
-}
-.highlight .gd {
-  color: #ac4142;
-}
-.highlight .gh {
-  color: #6a9fb5;
-  background-color: #151515;
-  font-weight: bold;
-}
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #aa759f;
-}
-.highlight .kc {
-  color: #d28445;
-}
-.highlight .kt {
-  color: #d28445;
-}
-.highlight .kd {
-  color: #d28445;
-}
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #90a959;
-}
-.highlight .sr {
-  color: #75b5aa;
-}
-.highlight .si {
-  color: #8f5536;
-}
-.highlight .se {
-  color: #8f5536;
-}
-.highlight .nn {
-  color: #f4bf75;
-}
-.highlight .nc {
-  color: #f4bf75;
-}
-.highlight .no {
-  color: #f4bf75;
-}
-.highlight .na {
-  color: #6a9fb5;
-}
-.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
-  color: #90a959;
-}
-.highlight .ss {
-  color: #90a959;
-}
-    </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="javascripts/all.js" type="text/javascript"></script>
+
+      <script>
+        $(function() {
+          setupLanguages(["http","shell"]);
+        });
+      </script>
   </head>
 
-  <body class="api" data-languages="[&quot;http&quot;,&quot;shell&quot;]">
+  <body class="api-guide">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -116,14 +43,19 @@
       <div class="content">
         <h1 id="overview">Overview</h1>
 
-<h2 id="uaa-api">UAA API</h2>
+<p>The User Account and Authentication Service (UAA):</p>
 
-<p>The User Account and Authentication Service (UAA):
-- is a separate application from Cloud Foundry the Cloud Controller</p>
+<ul>
+<li>is an OAuth2 server that can be used for centralized identity management.</li>
+<li>owns the user accounts and authentication sources (SAML, LDAP)</li>
+<li>supports standard protocols such as SAML, LDAP and OpenID Connect to provide single sign-on and delegated authorization to web applications</li>
+<li>can be invoked via JSON APIs</li>
+<li>provides a basic login/approval UI for web client apps</li>
+<li>supports APIs for user account management for an external web UI</li>
+<li>most of the APIs are defined by the specs for the OAuth2, OpenID Connect, and SCIM standards.</li>
+</ul>
 
 <h1 id="authorization">Authorization</h1>
-
-<p>This is a completely vanilla as per the OAuth2 spec, but we give a brief outline here for information purposes.</p>
 
 <h2 id="authorization-code-grant">Authorization Code Grant</h2>
 
@@ -141,13 +73,13 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">http://redirect.to/app?code=xQDy5U</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://redirect.to/app?code=PzPYUC</span>
 
 </code></pre>
 <pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;scope=openid+oauth.approvals&amp;redirect_uri=http%3A%2F%2Fredirect.to%2Fapp'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
 </code></pre>
 
-<h3 id="request-parameters">Request Parameters</h3>
+<p><em>Request Parameters</em></p>
 
 <table><thead>
 <tr>
@@ -157,7 +89,7 @@
 </thead><tbody>
 <tr>
 <td>response_type</td>
-<td>either &ldquo;code&rdquo; for requesting an authorization code for an access token, as per OAuth spec</td>
+<td>either <code class="prettyprint">code</code> for requesting an authorization code for an access token, as per OAuth spec</td>
 </tr>
 <tr>
 <td>client_id</td>
@@ -174,10 +106,8 @@
 </tbody></table>
 
 <h3 id="api-flow">Api flow</h3>
-
-<p><code class="prettyprint">GET /oauth/authorize</code></p>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=nw9mDB</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5Yzk1Mzg1YS0wNjRjLTQ2NTktOWE0MS00NzhhM2FkM2EyYTMiLCJzdWIiOiIwYjNkMDgxNS1mMWQ1LTQzOGMtYTkzZS0zM2U4ZTg4ZTdhNzQiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMGIzZDA4MTUtZjFkNS00MzhjLWE5M2UtMzNlOGU4OGU3YTc0Iiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODA3NDYyNiwicmV2X3NpZyI6ImZkMDgwN2JkIiwiaWF0IjoxNDU4MDc0NjI2LCJleHAiOjE0NTgxMTc4MjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.k2tmmfhyeqITWjemSRUPhFg1hKjimbOUQ6kG_gCoYds</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=nvJcu8</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1MWE5NzU1Yy0xNjRkLTQyYWMtODQxOC1iZjRlOGUyOTUwOWMiLCJzdWIiOiIxNjI5ZGM4Zi04MDgxLTQxOTEtYWMwNC1kMzRlZDY0MWZlMDQiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMTYyOWRjOGYtODA4MS00MTkxLWFjMDQtZDM0ZWQ2NDFmZTA0Iiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODA4NTA3NSwicmV2X3NpZyI6IjY5NmQ0MjlmIiwiaWF0IjoxNDU4MDg1MDc1LCJleHAiOjE0NTgxMjgyNzUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.EXTRI6-atTnsGN8zUAMGLixk4rUIpvF29wD7HALckpU</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
 </code></pre>
@@ -188,13 +118,13 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">https://uaa.cloudfoundry.com/redirect/cf?code=SvzDuw&amp;state=nw9mDB</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">https://uaa.cloudfoundry.com/redirect/cf?code=i446Bb&amp;state=nvJcu8</span>
 
 </code></pre>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=nw9mDB'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI5Yzk1Mzg1YS0wNjRjLTQ2NTktOWE0MS00NzhhM2FkM2EyYTMiLCJzdWIiOiIwYjNkMDgxNS1mMWQ1LTQzOGMtYTkzZS0zM2U4ZTg4ZTdhNzQiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMGIzZDA4MTUtZjFkNS00MzhjLWE5M2UtMzNlOGU4OGU3YTc0Iiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODA3NDYyNiwicmV2X3NpZyI6ImZkMDgwN2JkIiwiaWF0IjoxNDU4MDc0NjI2LCJleHAiOjE0NTgxMTc4MjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.k2tmmfhyeqITWjemSRUPhFg1hKjimbOUQ6kG_gCoYds'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=nvJcu8'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1MWE5NzU1Yy0xNjRkLTQyYWMtODQxOC1iZjRlOGUyOTUwOWMiLCJzdWIiOiIxNjI5ZGM4Zi04MDgxLTQxOTEtYWMwNC1kMzRlZDY0MWZlMDQiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMTYyOWRjOGYtODA4MS00MTkxLWFjMDQtZDM0ZWQ2NDFmZTA0Iiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODA4NTA3NSwicmV2X3NpZyI6IjY5NmQ0MjlmIiwiaWF0IjoxNDU4MDg1MDc1LCJleHAiOjE0NTgxMjgyNzUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.EXTRI6-atTnsGN8zUAMGLixk4rUIpvF29wD7HALckpU'</span>
 </code></pre>
 
-<h4 id="request-parameters">Request Parameters</h4>
+<p><em>Request Parameters</em></p>
 
 <table><thead>
 <tr>
@@ -204,7 +134,7 @@
 </thead><tbody>
 <tr>
 <td>response_type</td>
-<td>either &ldquo;code&rdquo; for requesting an authorization code or &ldquo;token&rdquo; for an access token, as per OAuth spec</td>
+<td><code class="prettyprint">code</code> for requesting an authorization code for an access token, as per OAuth spec</td>
 </tr>
 <tr>
 <td>client_id</td>
@@ -220,7 +150,7 @@
 </tr>
 </tbody></table>
 
-<h4 id="request-headers">Request Headers</h4>
+<p><em>Request Headers</em></p>
 
 <table><thead>
 <tr>
@@ -230,15 +160,15 @@
 </thead><tbody>
 <tr>
 <td>Authorization</td>
-<td>Bearer <token containing uaa.user scope> - the authentication for this user</td>
+<td>Bearer token containing uaa.user scope - the authentication for this user</td>
 </tr>
 </tbody></table>
 
-<h4 id="notes-about-this-api">Notes about this API</h4>
-
-<p>The client must have autoapprove=true, or you will not get a code back
-If the client doesn&rsquo;t have a redirect_uri registered, it is an required parameter of the request
-The token must have scope &ldquo;uaa.user&rdquo; in order for this request to succeed</p>
+<aside class="notice">
+  The client must have autoapprove=true, or you will not get a code back
+  If the client doesn&rsquo;t have a redirect_uri registered, it is an required parameter of the request
+  The token must have scope &ldquo;uaa.user&rdquo; in order for this request to succeed.
+</aside>
 
 <h2 id="implicit-grant">Implicit Grant</h2>
 
@@ -256,13 +186,13 @@ The token must have scope &ldquo;uaa.user&rdquo; in order for this request to su
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkYjc1YWQ3OS1kMDQxLTRiOWYtYTQ3ZS0yMjRhMTA1YTQwNDAiLCJzdWIiOiIwYjNkMDgxNS1mMWQ1LTQzOGMtYTkzZS0zM2U4ZTg4ZTdhNzQiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6IjBiM2QwODE1LWYxZDUtNDM4Yy1hOTNlLTMzZThlODhlN2E3NCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiZGFmNmQwNWMiLCJpYXQiOjE0NTgwNzQ2MjYsImV4cCI6MTQ1ODExNzgyNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.ANCHJAscu_A-0B1hQoXbCV9mZRe-xABL1S5Yjw81fvY&amp;expires_in=43199&amp;jti=db75ad79-d041-4b9f-a47e-224a105a4040</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI5NThhMWQwOC0xOTI4LTQ1MjUtYTJhNy1mMWI3NjUzYjgyYTEiLCJzdWIiOiIxNjI5ZGM4Zi04MDgxLTQxOTEtYWMwNC1kMzRlZDY0MWZlMDQiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6IjE2MjlkYzhmLTgwODEtNDE5MS1hYzA0LWQzNGVkNjQxZmUwNCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiNTRiYWRkZDUiLCJpYXQiOjE0NTgwODUwNzYsImV4cCI6MTQ1ODEyODI3NiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.-_U6GQh-r9Ds0eNc0zsmgEGF6jLMQ5-zxWiWZamVvl4&amp;expires_in=43199&amp;jti=958a1d08-1928-4525-a2a7-f1b7653b82a1</span>
 
 </code></pre>
 <pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
 </code></pre>
 
-<h3 id="request-parameters">Request Parameters</h3>
+<p><em>Request Parameters</em></p>
 
 <table><thead>
 <tr>
@@ -288,7 +218,7 @@ The token must have scope &ldquo;uaa.user&rdquo; in order for this request to su
 </tr>
 </tbody></table>
 
-<h3 id="response-headers">Response Headers</h3>
+<p><em>Response Headers</em></p>
 
 <table><thead>
 <tr>
