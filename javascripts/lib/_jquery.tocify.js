@@ -727,7 +727,7 @@
 
                             if(window.location.hash !== "#" + anchorText && anchorText !== undefined) {
 
-                                if(history.replaceState && location.protocol !== 'file:') {
+                                if(history.replaceState) {
                                     history.replaceState({}, "", "#" + anchorText);
                                 // provide a fallback
                                 } else {

@@ -121,7 +121,7 @@ under the License.
     if (hash) {
       hash = hash.replace(/^#+/, '');
     }
-    if (history.pushState && location.protocol !== 'file:') {
+    if (history.pushState) {
       history.pushState({}, '', '?' + generateNewQueryString(language) + '#' + hash);
     }
 
