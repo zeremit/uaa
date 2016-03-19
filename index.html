@@ -18,7 +18,7 @@
       </script>
   </head>
 
-  <body class="api-guide">
+  <body class="index">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -73,7 +73,7 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">http://redirect.to/app?code=Ie3th4</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://redirect.to/app?code=NCVgvk</span>
 
 </code></pre>
 <pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;scope=openid+oauth.approvals&amp;redirect_uri=http%3A%2F%2Fredirect.to%2Fapp'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
@@ -106,8 +106,8 @@
 </tbody></table>
 
 <h3 id="api-flow">Api flow</h3>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=NaG3da</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkZDk4YjM5YS1kNGJkLTQzYTgtYjIwMy00ZDhlNDY1ZGRjYzAiLCJzdWIiOiJjNTY2MmU1ZC1lNzFlLTQ4NjctODdkMi00YzI2Zjk3MzcwMTMiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiYzU2NjJlNWQtZTcxZS00ODY3LTg3ZDItNGMyNmY5NzM3MDEzIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODE3NTA3NiwicmV2X3NpZyI6ImQyZGZkMTM2IiwiaWF0IjoxNDU4MTc1MDc3LCJleHAiOjE0NTgyMTgyNzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.Up29EiIAhUFl2DvRk7GlWYfiIC5oaT9AIKJKTPJxztE</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=6gnVbb</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxOGUzNjVjMi01MGQ5LTRhYTgtYTkxMC04ZTAzNzI3YzczMGIiLCJzdWIiOiI2OWEzNDRmYi02NDUxLTRhZjQtYWM5OC00OTJjODI3ZjQxNDEiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiNjlhMzQ0ZmItNjQ1MS00YWY0LWFjOTgtNDkyYzgyN2Y0MTQxIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODM0Njg1OCwicmV2X3NpZyI6IjQ3OTI1MDVmIiwiaWF0IjoxNDU4MzQ2ODU4LCJleHAiOjE0NTgzOTAwNTgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.44op9QOwYzW6QyizlRXO-TydVO6Aw5VATZGLVIJBt9w</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
 </code></pre>
@@ -118,10 +118,10 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">https://uaa.cloudfoundry.com/redirect/cf?code=Y46Sk5&amp;state=NaG3da</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">https://uaa.cloudfoundry.com/redirect/cf?code=zoJisk&amp;state=6gnVbb</span>
 
 </code></pre>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=NaG3da'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkZDk4YjM5YS1kNGJkLTQzYTgtYjIwMy00ZDhlNDY1ZGRjYzAiLCJzdWIiOiJjNTY2MmU1ZC1lNzFlLTQ4NjctODdkMi00YzI2Zjk3MzcwMTMiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiYzU2NjJlNWQtZTcxZS00ODY3LTg3ZDItNGMyNmY5NzM3MDEzIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODE3NTA3NiwicmV2X3NpZyI6ImQyZGZkMTM2IiwiaWF0IjoxNDU4MTc1MDc3LCJleHAiOjE0NTgyMTgyNzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.Up29EiIAhUFl2DvRk7GlWYfiIC5oaT9AIKJKTPJxztE'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=6gnVbb'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxOGUzNjVjMi01MGQ5LTRhYTgtYTkxMC04ZTAzNzI3YzczMGIiLCJzdWIiOiI2OWEzNDRmYi02NDUxLTRhZjQtYWM5OC00OTJjODI3ZjQxNDEiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiNjlhMzQ0ZmItNjQ1MS00YWY0LWFjOTgtNDkyYzgyN2Y0MTQxIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODM0Njg1OCwicmV2X3NpZyI6IjQ3OTI1MDVmIiwiaWF0IjoxNDU4MzQ2ODU4LCJleHAiOjE0NTgzOTAwNTgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.44op9QOwYzW6QyizlRXO-TydVO6Aw5VATZGLVIJBt9w'</span>
 </code></pre>
 
 <p><em>Request Parameters</em></p>
@@ -186,7 +186,7 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJjNzQ3MzhmZi1iMjQxLTRmMTctYmRhZi1iNjBjYzg2Y2ZiMjMiLCJzdWIiOiJjNTY2MmU1ZC1lNzFlLTQ4NjctODdkMi00YzI2Zjk3MzcwMTMiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6ImM1NjYyZTVkLWU3MWUtNDg2Ny04N2QyLTRjMjZmOTczNzAxMyIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiNWQ2Y2Q5NDciLCJpYXQiOjE0NTgxNzUwNzgsImV4cCI6MTQ1ODIxODI3OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.j4C5gjf0C0rpMNS5LXpX5pu6pr37mjPzF4-7hR8gX6k&amp;expires_in=43199&amp;jti=c74738ff-b241-4f17-bdaf-b60cc86cfb23</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI5ZWU5MTJiNS00NmIzLTQwYjctOThkOC0yNGQzNzk5Zjg5MTIiLCJzdWIiOiI2OWEzNDRmYi02NDUxLTRhZjQtYWM5OC00OTJjODI3ZjQxNDEiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6IjY5YTM0NGZiLTY0NTEtNGFmNC1hYzk4LTQ5MmM4MjdmNDE0MSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiM2UyOTZjNmUiLCJpYXQiOjE0NTgzNDY4NTgsImV4cCI6MTQ1ODM5MDA1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.DCEFHq8xk2ml68Cy5JAsc-m-mN0Ec2iR3SfZsoP4yxo&amp;expires_in=43199&amp;jti=9ee912b5-46b3-40b7-98d8-24d3799f8912</span>
 
 </code></pre>
 <pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
@@ -240,7 +240,7 @@
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=qDnttu&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf
+client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=coS3xl&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -252,11 +252,18 @@ client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
-<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1634</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1668</span>
 
-<span class="p">{</span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkYWMyOWJkZC03NmNiLTRjM2YtOTJlZi03MmNkZDFhNWQ0NzMiLCJzdWIiOiI0MWFjNmJkNi01OTI4LTRhYjEtOTE0Mi02NDUwODRlOTc2YmEiLCJzY29wZSI6WyJvcGVuaWQiLCJvYXV0aC5hcHByb3ZhbHMiXSwiY2xpZW50X2lkIjoibG9naW4iLCJjaWQiOiJsb2dpbiIsImF6cCI6ImxvZ2luIiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInVzZXJfaWQiOiI0MWFjNmJkNi01OTI4LTRhYjEtOTE0Mi02NDUwODRlOTc2YmEiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJrajdtVjZAdGVzdC5vcmciLCJlbWFpbCI6ImtqN21WNkB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODE3NTEwOSwicmV2X3NpZyI6IjM1NjIzMmYiLCJpYXQiOjE0NTgxNzUxMDksImV4cCI6MTQ1ODIxODMwOSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJvcGVuaWQiLCJsb2dpbiIsIm9hdXRoIl19.DHM2J7lsIjteHtMN6iT35ajB4YG0GilEV6J7Aa85KvQ"</span><span class="p">,</span><span class="nt">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="nt">"refresh_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0Y2FlODJkNS0xNzQ3LTQ3NjAtOWFjMC1mNDg1YTFhYmI5YzYtciIsInN1YiI6IjQxYWM2YmQ2LTU5MjgtNGFiMS05MTQyLTY0NTA4NGU5NzZiYSIsInNjb3BlIjpbIm9wZW5pZCIsIm9hdXRoLmFwcHJvdmFscyJdLCJpYXQiOjE0NTgxNzUxMDksImV4cCI6MTQ2MDc2NzEwOSwiY2lkIjoibG9naW4iLCJjbGllbnRfaWQiOiJsb2dpbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwidXNlcl9uYW1lIjoia2o3bVY2QHRlc3Qub3JnIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjQxYWM2YmQ2LTU5MjgtNGFiMS05MTQyLTY0NTA4NGU5NzZiYSIsInJldl9zaWciOiIzNTYyMzJmIiwiYXVkIjpbIm9wZW5pZCIsImxvZ2luIiwib2F1dGgiXX0.L-YSw6E8g0ICiVV1a6kuwUeg1tkREOF6mROfv2bxsBc"</span><span class="p">,</span><span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">43199</span><span class="p">,</span><span class="nt">"scope"</span><span class="p">:</span><span class="s2">"openid oauth.approvals"</span><span class="p">,</span><span class="nt">"jti"</span><span class="p">:</span><span class="s2">"dac29bdd-76cb-4c3f-92ef-72cdd1a5d473"</span><span class="p">}</span><span class="w">
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJjOThlMzQwMi01Nzg4LTQ1Y2UtYTg3YS0yNDU5M2FmZGVhNWQiLCJzdWIiOiJiNTkyMjQ5My1jZDkyLTRiNmUtOWJiOC0xNWQ1OGJmNDM5OWYiLCJzY29wZSI6WyJvcGVuaWQiLCJvYXV0aC5hcHByb3ZhbHMiXSwiY2xpZW50X2lkIjoibG9naW4iLCJjaWQiOiJsb2dpbiIsImF6cCI6ImxvZ2luIiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInVzZXJfaWQiOiJiNTkyMjQ5My1jZDkyLTRiNmUtOWJiOC0xNWQ1OGJmNDM5OWYiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJLRjNRQ29AdGVzdC5vcmciLCJlbWFpbCI6IktGM1FDb0B0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1ODM0Njg5MiwicmV2X3NpZyI6ImJhNGZjMDA2IiwiaWF0IjoxNDU4MzQ2ODkyLCJleHAiOjE0NTgzOTAwOTIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsib3BlbmlkIiwibG9naW4iLCJvYXV0aCJdfQ.anwTgVexPdBEvuVshDt4f1k4IHakM3upJY5qQLYlJKU"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJlZjE1Y2YyYi00ODUyLTQ4YzQtODQyOC02NGE3OWRiY2RkNTAtciIsInN1YiI6ImI1OTIyNDkzLWNkOTItNGI2ZS05YmI4LTE1ZDU4YmY0Mzk5ZiIsInNjb3BlIjpbIm9wZW5pZCIsIm9hdXRoLmFwcHJvdmFscyJdLCJpYXQiOjE0NTgzNDY4OTIsImV4cCI6MTQ2MDkzODg5MiwiY2lkIjoibG9naW4iLCJjbGllbnRfaWQiOiJsb2dpbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwidXNlcl9uYW1lIjoiS0YzUUNvQHRlc3Qub3JnIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6ImI1OTIyNDkzLWNkOTItNGI2ZS05YmI4LTE1ZDU4YmY0Mzk5ZiIsInJldl9zaWciOiJiYTRmYzAwNiIsImF1ZCI6WyJvcGVuaWQiLCJsb2dpbiIsIm9hdXRoIl19.SZDOfezc4IOBNRVTiYqvzYXMC3ecp_S45Xi0qmP9ieU"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"openid oauth.approvals"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"c98e3402-5788-45ce-a87a-24593afdea5d"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=qDnttu&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=coS3xl&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf'</span>
 </code></pre>
 
 <p><em>Request Parameters</em></p>
@@ -352,9 +359,15 @@ client_id=login&amp;client_secret=loginsecret&amp;grant_type=client_credentials&
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
-<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1301</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1327</span>
 
-<span class="p">{</span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI4ZjdiZDQzYS1jMmY0LTQ4MTgtYjllYy1kODJhYzE3M2Q2YmMiLCJzdWIiOiJsb2dpbiIsImF1dGhvcml0aWVzIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sImNsaWVudF9pZCI6ImxvZ2luIiwiY2lkIjoibG9naW4iLCJhenAiOiJsb2dpbiIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiMzFmNzllNWMiLCJpYXQiOjE0NTgxNzUxMDgsImV4cCI6MTQ1ODIxODMwOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJsb2dpbiIsImNsaWVudHMiLCJlbWFpbHMiLCJzY2ltIiwicGFzc3dvcmQiLCJpZHBzIiwibm90aWZpY2F0aW9ucyIsIm9hdXRoIiwiY3JpdGljYWxfbm90aWZpY2F0aW9ucyJdfQ.cnFxgsX8vI13duGuZW8EBgJSKsNboVGwdiQVdVOraNo"</span><span class="p">,</span><span class="nt">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">43199</span><span class="p">,</span><span class="nt">"scope"</span><span class="p">:</span><span class="s2">"clients.read emails.write scim.userids password.write idps.write notifications.write oauth.login scim.write critical_notifications.write"</span><span class="p">,</span><span class="nt">"jti"</span><span class="p">:</span><span class="s2">"8f7bd43a-c2f4-4818-b9ec-d82ac173d6bc"</span><span class="p">}</span><span class="w">
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIwMWRhYWU1NC1jYTgzLTQwZmItYjkxYS05NWVhZDgxZGJlNDgiLCJzdWIiOiJsb2dpbiIsImF1dGhvcml0aWVzIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sImNsaWVudF9pZCI6ImxvZ2luIiwiY2lkIjoibG9naW4iLCJhenAiOiJsb2dpbiIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiOWE4NjJiOGMiLCJpYXQiOjE0NTgzNDY4OTIsImV4cCI6MTQ1ODM5MDA5MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJsb2dpbiIsImNsaWVudHMiLCJlbWFpbHMiLCJzY2ltIiwicGFzc3dvcmQiLCJpZHBzIiwibm90aWZpY2F0aW9ucyIsIm9hdXRoIiwiY3JpdGljYWxfbm90aWZpY2F0aW9ucyJdfQ.PSEHek19OjFJSQFThxmUOOo4mUhnMwlBZxp4TV3FHBU"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"clients.read emails.write scim.userids password.write idps.write notifications.write oauth.login scim.write critical_notifications.write"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"01daae54-ca83-40fb-b91a-95ead81dbe48"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 <pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=login&amp;client_secret=loginsecret&amp;grant_type=client_credentials&amp;response_type=token'</span>
 </code></pre>
@@ -427,7 +440,7 @@ client_id=login&amp;client_secret=loginsecret&amp;grant_type=client_credentials&
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=CUqWci%40test.org&amp;password=secr3T&amp;response_type=token
+client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=4h6RJQ%40test.org&amp;password=secr3T&amp;response_type=token
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -439,11 +452,18 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;user
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
-<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1894</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1925</span>
 
-<span class="p">{</span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0NmRlODRlZS0wN2ZlLTQ0MDEtYmJiZC1jOTMyMmVmZjBhMjEiLCJzdWIiOiI2OGI2MzExNC1lZjkzLTRjNzgtODQwNi05NjZhMzhhNzUzMTMiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjY4YjYzMTE0LWVmOTMtNGM3OC04NDA2LTk2NmEzOGE3NTMxMyIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6IkNVcVdjaUB0ZXN0Lm9yZyIsImVtYWlsIjoiQ1VxV2NpQHRlc3Qub3JnIiwiYXV0aF90aW1lIjoxNDU4MTc1MTA4LCJyZXZfc2lnIjoiN2RlOTk5ZjEiLCJpYXQiOjE0NTgxNzUxMDgsImV4cCI6MTQ1ODIxODMwOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.By2OnrAsZSmgKA6qmYSXS5lCnq-oPhgojUcxpWaOJcU"</span><span class="p">,</span><span class="nt">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="nt">"refresh_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1YjBhYjAyZS01NmU4LTQ1OGEtYjljYy01MDcxNTAxZTMwYjktciIsInN1YiI6IjY4YjYzMTE0LWVmOTMtNGM3OC04NDA2LTk2NmEzOGE3NTMxMyIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTgxNzUxMDgsImV4cCI6MTQ2MDc2NzEwOCwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IkNVcVdjaUB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiI2OGI2MzExNC1lZjkzLTRjNzgtODQwNi05NjZhMzhhNzUzMTMiLCJyZXZfc2lnIjoiN2RlOTk5ZjEiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.IQ3gnJ5OQ1MuW2hQYSHX_PCdYWxO2OXMpKWrKhjCtoA"</span><span class="p">,</span><span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">43199</span><span class="p">,</span><span class="nt">"scope"</span><span class="p">:</span><span class="s2">"scim.userids openid cloud_controller.read password.write cloud_controller.write"</span><span class="p">,</span><span class="nt">"jti"</span><span class="p">:</span><span class="s2">"46de84ee-07fe-4401-bbbd-c9322eff0a21"</span><span class="p">}</span><span class="w">
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzMmU3MGU5OC1kY2UxLTRhODctOWJmMC0yMmE2NGY3NDM1MmEiLCJzdWIiOiJlY2VmNjNiMi0zM2RmLTRiMTktYWNhYy05MDEwNjYxNDJjOTIiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6ImVjZWY2M2IyLTMzZGYtNGIxOS1hY2FjLTkwMTA2NjE0MmM5MiIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6IjRoNlJKUUB0ZXN0Lm9yZyIsImVtYWlsIjoiNGg2UkpRQHRlc3Qub3JnIiwiYXV0aF90aW1lIjoxNDU4MzQ2ODkxLCJyZXZfc2lnIjoiMjg2NjVjOWQiLCJpYXQiOjE0NTgzNDY4OTEsImV4cCI6MTQ1ODM5MDA5MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.UXXjJ7tfOG_Ak_noVsWxeRtV8454V9FWfIrEO0Um2e4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiNmJjY2Q0NC02ZTRjLTQ1YjEtYTkyMS03Mzk0YWM1M2I4NWItciIsInN1YiI6ImVjZWY2M2IyLTMzZGYtNGIxOS1hY2FjLTkwMTA2NjE0MmM5MiIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTgzNDY4OTEsImV4cCI6MTQ2MDkzODg5MSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IjRoNlJKUUB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiJlY2VmNjNiMi0zM2RmLTRiMTktYWNhYy05MDEwNjYxNDJjOTIiLCJyZXZfc2lnIjoiMjg2NjVjOWQiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.5xnlYyTBEFTbPTFMt9GiPzs2NvlQgefyR09aks6DduE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"scim.userids openid cloud_controller.read password.write cloud_controller.write"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"32e70e98-dce1-4a87-9bf0-22a64f74352a"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=CUqWci%40test.org&amp;password=secr3T&amp;response_type=token'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=4h6RJQ%40test.org&amp;password=secr3T&amp;response_type=token'</span>
 </code></pre>
 
 <p><em>Request Parameters</em></p>
@@ -528,7 +548,7 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;user
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Basic YXBwOmFwcGNsaWVudHNlY3JldA==</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-grant_type=password&amp;passcode=huQvOq&amp;response_type=token
+grant_type=password&amp;passcode=W9ebqM&amp;response_type=token
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -540,11 +560,18 @@ grant_type=password&amp;passcode=huQvOq&amp;response_type=token
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
-<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1843</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1874</span>
 
-<span class="p">{</span><span class="nt">"access_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkODU5NzhiYS1mZjQ5LTRjNjQtOTg1NC04YTdlMzU4NzhjZDIiLCJzdWIiOiI2YmM2ODQzNy04ZjcyLTQxMmYtOTQ2MS03YmFlZWIyNzJlNzgiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjZiYzY4NDM3LThmNzItNDEyZi05NDYxLTdiYWVlYjI3MmU3OCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiYzhjZTU2YzEiLCJpYXQiOjE0NTgxNzUxMDUsImV4cCI6MTQ1ODIxODMwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.NlpGIUjSabEB6mSllCxysCd6QDNNWPW532VR6vBInCs"</span><span class="p">,</span><span class="nt">"token_type"</span><span class="p">:</span><span class="s2">"bearer"</span><span class="p">,</span><span class="nt">"refresh_token"</span><span class="p">:</span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiZDZjMmE2Ny03MDFiLTQzZWQtOTU4OS1hNjkwNDhjYTQ4NjAtciIsInN1YiI6IjZiYzY4NDM3LThmNzItNDEyZi05NDYxLTdiYWVlYjI3MmU3OCIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTgxNzUxMDUsImV4cCI6MTQ2MDc2NzEwNSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX2lkIjoiNmJjNjg0MzctOGY3Mi00MTJmLTk0NjEtN2JhZWViMjcyZTc4IiwicmV2X3NpZyI6ImM4Y2U1NmMxIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.ytnyCJ79lwTciGjIUxyL5xWW0vUkFbXC_obcdMDdJzI"</span><span class="p">,</span><span class="nt">"expires_in"</span><span class="p">:</span><span class="mi">43199</span><span class="p">,</span><span class="nt">"scope"</span><span class="p">:</span><span class="s2">"scim.userids openid cloud_controller.read password.write cloud_controller.write"</span><span class="p">,</span><span class="nt">"jti"</span><span class="p">:</span><span class="s2">"d85978ba-ff49-4c64-9854-8a7e35878cd2"</span><span class="p">}</span><span class="w">
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmMzNhMzdmOC02NmI4LTQwMDYtYTRiOC0wYjYwNzk1ZDk3OWEiLCJzdWIiOiI4OTVkNGNmNC03OGQxLTQxYmEtYmFlZi1iMTNjOGE3NTMyYWEiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6Ijg5NWQ0Y2Y0LTc4ZDEtNDFiYS1iYWVmLWIxM2M4YTc1MzJhYSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiYWYyNjdmNjEiLCJpYXQiOjE0NTgzNDY4OTEsImV4cCI6MTQ1ODM5MDA5MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.UtqHBZ9ygj078AeKKG1fhyKiU07eLJSvi65k1gMUWp0"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIyYTIwZDMxNC00YmUwLTQ4MmItYjNjZS01MmNjMmFhYWU5MGItciIsInN1YiI6Ijg5NWQ0Y2Y0LTc4ZDEtNDFiYS1iYWVmLWIxM2M4YTc1MzJhYSIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTgzNDY4OTEsImV4cCI6MTQ2MDkzODg5MSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX2lkIjoiODk1ZDRjZjQtNzhkMS00MWJhLWJhZWYtYjEzYzhhNzUzMmFhIiwicmV2X3NpZyI6ImFmMjY3ZjYxIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.1zUudkRxv3HaZg5XiKL-TUt_EhwpZlZkMzv38ExjRw8"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"scim.userids openid cloud_controller.read password.write cloud_controller.write"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"f33a37f8-66b8-4006-a4b8-0b60795d979a"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -u <span class="s1">'app:appclientsecret'</span> -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'grant_type=password&amp;passcode=huQvOq&amp;response_type=token'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -u <span class="s1">'app:appclientsecret'</span> -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'grant_type=password&amp;passcode=W9ebqM&amp;response_type=token'</span>
 </code></pre>
 
 <p><em>Request Header</em></p>
@@ -627,6 +654,2007 @@ grant_type=password&amp;passcode=huQvOq&amp;response_type=token
 <aside class="notice">
   The client-id and client-secret can also be included in the header as Basic Authorization for all grant types.
 </aside>
+
+<h1 id="identity-zones">Identity Zones</h1>
+
+<p>The UAA supports multi tenancy. This is referred to as identity zones. An identity zones is accessed through a unique subdomain. If the standard UAA responds to <a href="https://uaa.10.244.0.34.xip.io">https://uaa.10.244.0.34.xip.io</a> a zone on this UAA would be accessed through <a href="https://testzone1.uaa.10.244.0.34.xip.io">https://testzone1.uaa.10.244.0.34.xip.io</a></p>
+
+<blockquote>
+<p>A zone contains a unique identifier as well as a unique subdomain:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="s2">"testzone1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subdomain"</span><span class="p">:</span><span class="s2">"testzone1"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="s2">"The Twiglet Zone[testzone1]"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"version"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"description"</span><span class="p">:</span><span class="s2">"Like the Twilight Zone but tastier[testzone1]."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created"</span><span class="p">:</span><span class="mi">1426258488910</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_modified"</span><span class="p">:</span><span class="mi">1426258488910</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<p>The UAA by default creates a default zone. This zone will always be present, the ID will always be <code class="prettyprint">uaa</code>, and the subdomain is blank:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"subdomain"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The system zone for backwards compatibility"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">946710000000</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_modified"</span><span class="p">:</span><span class="w"> </span><span class="mi">946710000000</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<aside class="notice">
+  Note that if you specify a subdomain in mixed or upper case for creation or update of an identity zone, it will be converted into lower case before stored in the database. This way the UAA has an easy way to query the database for a zone based on a hostname.
+</aside>
+
+<h2 id="creating-an-identity-zone">Creating an identity zone</h2>
+
+<p>An identity zone is created using a <code class="prettyprint">POST</code> with an <code class="prettyprint">IdentityZone</code> object. If the object contains an id, this id will be used as the identifier, otherwise an identifier will be generated. Once a zone has been created, the UAA will start accepting requests on the subdomain defined in the <code class="prettyprint">subdomain</code> field of the identity zone.
+When an Identity Zone is created, an internal Identity Provider is automatically created with the default password policy.</p>
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/identity-zones</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJlM2RhNTQ5Zi1jZGY2LTRkNDQtYTM4Ni04YzU5ODViZjI1YjIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJjNGNkZjQ3YyIsImlhdCI6MTQ1ODM0NjgyNywiZXhwIjoxNDU4MzkwMDI3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.VdinUhsT6E9Dy43bp_r6B0p4QGAp5SEFXX3pEUlRs_w</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1439</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-create"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-create"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"exampleKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"signingKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"s1gNiNg.K3y/t3XT"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but tastier."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827725</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827725</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1439</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-create"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-create"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"exampleKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"signingKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"s1gNiNg.K3y/t3XT"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but tastier."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827750</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827750</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones'</span> -i -X POST -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJlM2RhNTQ5Zi1jZGY2LTRkNDQtYTM4Ni04YzU5ODViZjI1YjIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJjNGNkZjQ3YyIsImlhdCI6MTQ1ODM0NjgyNywiZXhwIjoxNDU4MzkwMDI3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.VdinUhsT6E9Dy43bp_r6B0p4QGAp5SEFXX3pEUlRs_w'</span> -H <span class="s1">'Content-Type: application/json'</span> -d <span class="s1">'{
+  "id" : "twiglet-create",
+  "subdomain" : "twiglet-create",
+  "config" : {
+    "tokenPolicy" : {
+      "accessTokenValidity" : -1,
+      "refreshTokenValidity" : -1,
+      "activeKeyId" : null,
+      "keys" : {
+        "exampleKeyId" : {
+          "signingKey" : "s1gNiNg.K3y/t3XT"
+        }
+      }
+    },
+    "samlConfig" : {
+      "assertionSigned" : true,
+      "requestSigned" : true,
+      "wantAssertionSigned" : false,
+      "wantAuthnRequestSigned" : false,
+      "assertionTimeToLiveSeconds" : 600,
+      "certificate" : null,
+      "privateKey" : null,
+      "privateKeyPassword" : null
+    },
+    "links" : {
+      "logout" : {
+        "redirectUrl" : "/login",
+        "redirectParameterName" : "redirect",
+        "disableRedirectParameter" : true,
+        "whitelist" : null
+      },
+      "selfService" : {
+        "selfServiceLinksEnabled" : true,
+        "signup" : "/create_account",
+        "passwd" : "/forgot_password"
+      }
+    },
+    "prompts" : [ {
+      "name" : "username",
+      "type" : "text",
+      "text" : "Email"
+    }, {
+      "name" : "password",
+      "type" : "password",
+      "text" : "Password"
+    }, {
+      "name" : "passcode",
+      "type" : "password",
+      "text" : "One Time Code (Get on at /passcode)"
+    } ]
+  },
+  "name" : "The Twiglet Zone",
+  "version" : 0,
+  "description" : "Like the Twilight Zone but tastier.",
+  "created" : 1458346827725,
+  "last_modified" : 1458346827725
+}'</span>
+</code></pre>
+
+<p><em>Request Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer token containing <code class="prettyprint">zones.write</code> or <code class="prettyprint">zones.&lt;zone id&gt;.admin</code></td>
+</tr>
+</tbody></table>
+
+<p><em>Request and Response Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique ID of the identity zone</td>
+</tr>
+<tr>
+<td>subdomain</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique subdomain for the running instance. May only contain legal characters for a subdomain name.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Required</td>
+<td>Human-readable zone name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Optional</td>
+<td>Description of the zone</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Number</td>
+<td>Optional</td>
+<td>Reserved for future use of E-Tag versioning</td>
+</tr>
+<tr>
+<td>config.tokenPolicy</td>
+<td>Object</td>
+<td>Optional</td>
+<td>Various fields pertaining to the JWT access and refresh tokens.</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.activeKeyId</td>
+<td>String</td>
+<td>Required if <code class="prettyprint">config.tokenPolicy.keys</code> are set</td>
+<td>The ID for the key that is being used to sign tokens</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.keys</td>
+<td>Object</td>
+<td>Optional</td>
+<td>Keys which will be used to sign the token</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.accessTokenValidity</td>
+<td>Number</td>
+<td>Optional</td>
+<td>Time in seconds between when a access token is issued and when it expires. Defaults to global <code class="prettyprint">accessTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.tokenPolicy.refreshTokenValidity</td>
+<td>Number</td>
+<td>Optional</td>
+<td>Time in seconds between when a refresh token is issued and when it expires. Defaults to global <code class="prettyprint">refreshTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>If <code class="prettyprint">true</code>, the SAML provider will sign all assertions</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAssertionSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, all assertions received by the SAML provider must be signed. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.requestSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, the service provider will sign all outgoing authentication requests. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAuthnRequestSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>If <code class="prettyprint">true</code>, the authentication request from the partner service provider must be signed.</td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionTimeToLiveSeconds</td>
+<td>Number</td>
+<td>Optional</td>
+<td>The lifetime of a SAML assertion in seconds. Defaults to 600.</td>
+</tr>
+<tr>
+<td>config.samlConfig.certificate</td>
+<td>String</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. The certificate used to sign all communications.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKey</td>
+<td>String</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKeyPassword</td>
+<td>String</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key password. Reserved for future use.</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectUrl</td>
+<td>String</td>
+<td>Optional</td>
+<td>Logout redirect url</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectParameterName</td>
+<td>String</td>
+<td>Optional</td>
+<td>Changes the name of the redirect parameter</td>
+</tr>
+<tr>
+<td>config.links.logout.disableRedirectParameter</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Whether or not to allow the redirect parameter on logout</td>
+</tr>
+<tr>
+<td>config.links.logout.whitelist</td>
+<td>Array</td>
+<td>Optional</td>
+<td>List of allowed whitelist redirects</td>
+</tr>
+<tr>
+<td>config.links.selfService.selfServiceLinksEnabled</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Whether or not users are allowed to sign up or reset their passwords via the UI</td>
+</tr>
+<tr>
+<td>config.links.selfService.signup</td>
+<td>String</td>
+<td>Optional</td>
+<td>Where users are directed upon clicking the account creation link</td>
+</tr>
+<tr>
+<td>config.links.selfService.passwd</td>
+<td>String</td>
+<td>Optional</td>
+<td>Where users are directed upon clicking the password reset link</td>
+</tr>
+<tr>
+<td>config.prompts[]</td>
+<td>Array</td>
+<td>Optional</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>config.prompts[].name</td>
+<td>String</td>
+<td>Optional</td>
+<td>Name of field</td>
+</tr>
+<tr>
+<td>config.prompts[].type</td>
+<td>String</td>
+<td>Optional</td>
+<td>What kind of field this is (e.g. text or password)</td>
+</tr>
+<tr>
+<td>config.prompts[].text</td>
+<td>String</td>
+<td>Optional</td>
+<td>Actual text displayed on prompt for field</td>
+</tr>
+</tbody></table>
+
+<p><em>Error Codes</em></p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - Invalid token</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - Insufficient scope (Zones can only be created by being authenticated in the default zone.)</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable Entity - Invalid zone details</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Sequential example of creating a zone and creating an admin client in that zone:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>uaac target http://localhost:8080/uaa
+
+uaac token client get admin -s adminsecret
+
+uaac client update admin --authorities "uaa.admin,clients.read,clients.write,clients.secret,scim.read,scim.write,clients.admin,zones.testzone1.admin,zones.write"
+
+uaac token client get admin -s adminsecret
+
+uaac -t curl -XPOST -H"Content-Type:application/json" -H"Accept:application/json" --data '{ "id":"testzone1", "subdomain":"testzone1", "name":"The Twiglet Zone[testzone1]", "version":0, "description":"Like the Twilight Zone but tastier[testzone1]."}' /identity-zones
+
+uaac -t curl -H"X-Identity-Zone-Id:testzone1" -XPOST -H"Content-Type:application/json" -H"Accept:application/json" --data '{ "client_id" : "admin", "client_secret" : "adminsecret", "scope" : ["uaa.none"], "resource_ids" : ["none"], "authorities" : ["uaa.admin","clients.read","clients.write","clients.secret","scim.read","scim.write","clients.admin"], "authorized_grant_types" : ["client_credentials"]}' /oauth/clients
+
+uaac target http://testzone1.localhost:8080/uaa
+
+uaac token client get admin -s adminsecret
+
+uaac token decode
+</code></pre>
+
+<h2 id="retrieving-an-identity-zone">Retrieving an identity zone</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/identity-zones/twiglet-get</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI2MjlmMDViNy05ZWIxLTRkYWItYTAyOS1kNDhkMzQ0Yzc2MzMiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6ImM0Y2RmNDdjIiwiaWF0IjoxNDU4MzQ2ODI3LCJleHAiOjE0NTgzOTAwMjcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.8EgdzBGVBwk_ToJIfPm3mRlUxsFnKuN_RVAoqvP4c_0</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1289</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827559</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827559</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-get'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI2MjlmMDViNy05ZWIxLTRkYWItYTAyOS1kNDhkMzQ0Yzc2MzMiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6ImM0Y2RmNDdjIiwiaWF0IjoxNDU4MzQ2ODI3LCJleHAiOjE0NTgzOTAwMjcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.8EgdzBGVBwk_ToJIfPm3mRlUxsFnKuN_RVAoqvP4c_0'</span>
+</code></pre>
+
+<p><em>Path Parameters</em></p>
+
+<p>/identity-zones/{id}</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique ID of the identity zone to retrieve</td>
+</tr>
+</tbody></table>
+
+<p><em>Request Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer token containing <code class="prettyprint">zones.read</code> or <code class="prettyprint">zones.&lt;zone id&gt;.admin</code> or <code class="prettyprint">zones.&lt;zone id&gt;.read</code></td>
+</tr>
+</tbody></table>
+
+<p><em>Response Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Unique ID of the identity zone</td>
+</tr>
+<tr>
+<td>subdomain</td>
+<td>String</td>
+<td>Unique subdomain for the running instance. May only contain legal characters for a subdomain name.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Human-readable zone name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Description of the zone</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Number</td>
+<td>Reserved for future use of E-Tag versioning</td>
+</tr>
+<tr>
+<td>config.tokenPolicy</td>
+<td>Object</td>
+<td>Various fields pertaining to the JWT access and refresh tokens.</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.activeKeyId</td>
+<td>String</td>
+<td>The ID for the key that is being used to sign tokens</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.keys</td>
+<td>Object</td>
+<td>Keys which will be used to sign the token</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.accessTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a access token is issued and when it expires. Defaults to global <code class="prettyprint">accessTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.tokenPolicy.refreshTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a refresh token is issued and when it expires. Defaults to global <code class="prettyprint">refreshTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the SAML provider will sign all assertions</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAssertionSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, all assertions received by the SAML provider must be signed. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.requestSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, the service provider will sign all outgoing authentication requests. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAuthnRequestSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the authentication request from the partner service provider must be signed.</td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionTimeToLiveSeconds</td>
+<td>Number</td>
+<td>The lifetime of a SAML assertion in seconds. Defaults to 600.</td>
+</tr>
+<tr>
+<td>config.samlConfig.certificate</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The certificate used to sign all communications.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKey</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKeyPassword</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key password. Reserved for future use.</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectUrl</td>
+<td>String</td>
+<td>Logout redirect url</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectParameterName</td>
+<td>String</td>
+<td>Changes the name of the redirect parameter</td>
+</tr>
+<tr>
+<td>config.links.logout.disableRedirectParameter</td>
+<td>Boolean</td>
+<td>Whether or not to allow the redirect parameter on logout</td>
+</tr>
+<tr>
+<td>config.links.logout.whitelist</td>
+<td>Array</td>
+<td>List of allowed whitelist redirects</td>
+</tr>
+<tr>
+<td>config.links.selfService.selfServiceLinksEnabled</td>
+<td>Boolean</td>
+<td>Whether or not users are allowed to sign up or reset their passwords via the UI</td>
+</tr>
+<tr>
+<td>config.links.selfService.signup</td>
+<td>String</td>
+<td>Where users are directed upon clicking the account creation link</td>
+</tr>
+<tr>
+<td>config.links.selfService.passwd</td>
+<td>String</td>
+<td>Where users are directed upon clicking the password reset link</td>
+</tr>
+<tr>
+<td>config.prompts[]</td>
+<td>Array</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>config.prompts[].name</td>
+<td>String</td>
+<td>Name of field</td>
+</tr>
+<tr>
+<td>config.prompts[].type</td>
+<td>String</td>
+<td>What kind of field this is (e.g. text or password)</td>
+</tr>
+<tr>
+<td>config.prompts[].text</td>
+<td>String</td>
+<td>Actual text displayed on prompt for field</td>
+</tr>
+</tbody></table>
+
+<p><em>Error Codes</em></p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - Invalid token</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - Insufficient scope</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found - Zone does not exist</td>
+</tr>
+</tbody></table>
+
+<h2 id="retrieving-all-identity-zones">Retrieving all identity zones</h2>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/identity-zones</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxNjZmNzRlYS1kNDRhLTQ0MGItYmM1ZS1mYjY4MTI4ZjVjMDAiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6ImM0Y2RmNDdjIiwiaWF0IjoxNDU4MzQ2ODI2LCJleHAiOjE0NTgzOTAwMjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.HR3uyGkL7cA586CPpjDvQWVcR2gQJhXxN-iKrZ3l3dE</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">6111</span>
+
+<span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get-1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346826472</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346826472</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get-2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get-2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346826580</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346826580</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43200</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2592000</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"\n-----BEGIN CERTIFICATE-----\nMIIDSTCCArKgAwIBAgIBADANBgkqhkiG9w0BAQQFADB8MQswCQYDVQQGEwJhdzEO\nMAwGA1UECBMFYXJ1YmExDjAMBgNVBAoTBWFydWJhMQ4wDAYDVQQHEwVhcnViYTEO\nMAwGA1UECxMFYXJ1YmExDjAMBgNVBAMTBWFydWJhMR0wGwYJKoZIhvcNAQkBFg5h\ncnViYUBhcnViYS5hcjAeFw0xNTExMjAyMjI2MjdaFw0xNjExMTkyMjI2MjdaMHwx\nCzAJBgNVBAYTAmF3MQ4wDAYDVQQIEwVhcnViYTEOMAwGA1UEChMFYXJ1YmExDjAM\nBgNVBAcTBWFydWJhMQ4wDAYDVQQLEwVhcnViYTEOMAwGA1UEAxMFYXJ1YmExHTAb\nBgkqhkiG9w0BCQEWDmFydWJhQGFydWJhLmFyMIGfMA0GCSqGSIb3DQEBAQUAA4GN\nADCBiQKBgQDHtC5gUXxBKpEqZTLkNvFwNGnNIkggNOwOQVNbpO0WVHIivig5L39W\nqS9u0hnA+O7MCA/KlrAR4bXaeVVhwfUPYBKIpaaTWFQR5cTR1UFZJL/OF9vAfpOw\nznoD66DDCnQVpbCjtDYWX+x6imxn8HCYxhMol6ZnTbSsFW6VZjFMjQIDAQABo4Ha\nMIHXMB0GA1UdDgQWBBTx0lDzjH/iOBnOSQaSEWQLx1syGDCBpwYDVR0jBIGfMIGc\ngBTx0lDzjH/iOBnOSQaSEWQLx1syGKGBgKR+MHwxCzAJBgNVBAYTAmF3MQ4wDAYD\nVQQIEwVhcnViYTEOMAwGA1UEChMFYXJ1YmExDjAMBgNVBAcTBWFydWJhMQ4wDAYD\nVQQLEwVhcnViYTEOMAwGA1UEAxMFYXJ1YmExHTAbBgkqhkiG9w0BCQEWDmFydWJh\nQGFydWJhLmFyggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEAYvBJ\n0HOZbbHClXmGUjGs+GS+xC1FO/am2suCSYqNB9dyMXfOWiJ1+TLJk+o/YZt8vuxC\nKdcZYgl4l/L6PxJ982SRhc83ZW2dkAZI4M0/Ud3oePe84k8jm3A7EvH5wi5hvCkK\nRpuRBwn3Ei+jCRouxTbzKPsuCVB+1sNyxMTXzf0=\n-----END CERTIFICATE-----\n                "</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"\n-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQDHtC5gUXxBKpEqZTLkNvFwNGnNIkggNOwOQVNbpO0WVHIivig5\nL39WqS9u0hnA+O7MCA/KlrAR4bXaeVVhwfUPYBKIpaaTWFQR5cTR1UFZJL/OF9vA\nfpOwznoD66DDCnQVpbCjtDYWX+x6imxn8HCYxhMol6ZnTbSsFW6VZjFMjQIDAQAB\nAoGAVOj2Yvuigi6wJD99AO2fgF64sYCm/BKkX3dFEw0vxTPIh58kiRP554Xt5ges\n7ZCqL9QpqrChUikO4kJ+nB8Uq2AvaZHbpCEUmbip06IlgdA440o0r0CPo1mgNxGu\nlhiWRN43Lruzfh9qKPhleg2dvyFGQxy5Gk6KW/t8IS4x4r0CQQD/dceBA+Ndj3Xp\nubHfxqNz4GTOxndc/AXAowPGpge2zpgIc7f50t8OHhG6XhsfJ0wyQEEvodDhZPYX\nkKBnXNHzAkEAyCA76vAwuxqAd3MObhiebniAU3SnPf2u4fdL1EOm92dyFs1JxyyL\ngu/DsjPjx6tRtn4YAalxCzmAMXFSb1qHfwJBAM3qx3z0gGKbUEWtPHcP7BNsrnWK\nvw6By7VC8bk/ffpaP2yYspS66Le9fzbFwoDzMVVUO/dELVZyBnhqSRHoXQcCQQCe\nA2WL8S5o7Vn19rC0GVgu3ZJlUrwiZEVLQdlrticFPXaFrn3Md82ICww3jmURaKHS\nN+l4lnMda79eSp3OMmq9AkA0p79BvYsLshUJJnvbk76pCjR28PK4dV1gSDUEqQMB\nqy45ptdwJLqLJCeNoR0JUcDNIRhOCuOPND7pcMtX6hI/\n-----END RSA PRIVATE KEY-----\n                "</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code ( Get one at http://localhost:8080/uaa/passcode )"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The system zone for backwards compatibility"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">946684800000</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346800523</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxNjZmNzRlYS1kNDRhLTQ0MGItYmM1ZS1mYjY4MTI4ZjVjMDAiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6ImM0Y2RmNDdjIiwiaWF0IjoxNDU4MzQ2ODI2LCJleHAiOjE0NTgzOTAwMjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.HR3uyGkL7cA586CPpjDvQWVcR2gQJhXxN-iKrZ3l3dE'</span>
+</code></pre>
+
+<p><em>Request Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer token containing <code class="prettyprint">zones.read</code> or <code class="prettyprint">zones.&lt;zone id&gt;.admin</code></td>
+</tr>
+</tbody></table>
+
+<p><em>Response Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>[].id</td>
+<td>String</td>
+<td>Unique ID of the identity zone</td>
+</tr>
+<tr>
+<td>[].subdomain</td>
+<td>String</td>
+<td>Unique subdomain for the running instance. May only contain legal characters for a subdomain name.</td>
+</tr>
+<tr>
+<td>[].name</td>
+<td>String</td>
+<td>Human-readable zone name</td>
+</tr>
+<tr>
+<td>[].description</td>
+<td>String</td>
+<td>Description of the zone</td>
+</tr>
+<tr>
+<td>[].version</td>
+<td>Number</td>
+<td>Reserved for future use of E-Tag versioning</td>
+</tr>
+<tr>
+<td>[].config.tokenPolicy</td>
+<td>Object</td>
+<td>Various fields pertaining to the JWT access and refresh tokens.</td>
+</tr>
+<tr>
+<td>[].config.tokenPolicy.activeKeyId</td>
+<td>String</td>
+<td>The ID for the key that is being used to sign tokens</td>
+</tr>
+<tr>
+<td>[].config.tokenPolicy.keys</td>
+<td>Object</td>
+<td>Keys which will be used to sign the token</td>
+</tr>
+<tr>
+<td>[].config.tokenPolicy.accessTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a access token is issued and when it expires. Defaults to global <code class="prettyprint">accessTokenValidity</code></td>
+</tr>
+<tr>
+<td>[].config.tokenPolicy.refreshTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a refresh token is issued and when it expires. Defaults to global <code class="prettyprint">refreshTokenValidity</code></td>
+</tr>
+<tr>
+<td>[].config.samlConfig.assertionSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the SAML provider will sign all assertions</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.wantAssertionSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, all assertions received by the SAML provider must be signed. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.requestSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, the service provider will sign all outgoing authentication requests. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.wantAuthnRequestSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the authentication request from the partner service provider must be signed.</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.assertionTimeToLiveSeconds</td>
+<td>Number</td>
+<td>The lifetime of a SAML assertion in seconds. Defaults to 600.</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.certificate</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The certificate used to sign all communications.</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.privateKey</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key.</td>
+</tr>
+<tr>
+<td>[].config.samlConfig.privateKeyPassword</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key password. Reserved for future use.</td>
+</tr>
+<tr>
+<td>[].config.links.logout.redirectUrl</td>
+<td>String</td>
+<td>Logout redirect url</td>
+</tr>
+<tr>
+<td>[].config.links.logout.redirectParameterName</td>
+<td>String</td>
+<td>Changes the name of the redirect parameter</td>
+</tr>
+<tr>
+<td>[].config.links.logout.disableRedirectParameter</td>
+<td>Boolean</td>
+<td>Whether or not to allow the redirect parameter on logout</td>
+</tr>
+<tr>
+<td>[].config.links.logout.whitelist</td>
+<td>Array</td>
+<td>List of allowed whitelist redirects</td>
+</tr>
+<tr>
+<td>[].config.links.selfService.selfServiceLinksEnabled</td>
+<td>Boolean</td>
+<td>Whether or not users are allowed to sign up or reset their passwords via the UI</td>
+</tr>
+<tr>
+<td>[].config.links.selfService.signup</td>
+<td>String</td>
+<td>Where users are directed upon clicking the account creation link</td>
+</tr>
+<tr>
+<td>[].config.links.selfService.passwd</td>
+<td>String</td>
+<td>Where users are directed upon clicking the password reset link</td>
+</tr>
+<tr>
+<td>[].config.prompts[]</td>
+<td>Array</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>[].config.prompts[].name</td>
+<td>String</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>[].config.prompts[].type</td>
+<td>String</td>
+<td>What kind of field this is (e.g. text or password)</td>
+</tr>
+<tr>
+<td>[].config.prompts[].text</td>
+<td>String</td>
+<td>Actual text displayed on prompt for field</td>
+</tr>
+</tbody></table>
+
+<p><em>Error Codes</em></p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - Invalid token</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - Insufficient scope</td>
+</tr>
+</tbody></table>
+
+<h2 id="updating-an-identity-zone">Updating an Identity Zone</h2>
+<pre class="highlight http"><code><span class="nf">PUT</span> <span class="nn">/identity-zones/twiglet-update</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI2Yzk3MjJjYi0yMzc1LTRlYzktOTRlOS1iZjI1NzE1YjVjNTQiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJjNGNkZjQ3YyIsImlhdCI6MTQ1ODM0NjgyNywiZXhwIjoxNDU4MzkwMDI3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.8QY8eCKjvlewKT_k5HnX_-GcB3-BvMML_BYPSZBXFHM</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1432</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-update"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"updatedKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"signingKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"upD4t3d.s1gNiNg.K3y/t3XT"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Updated Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but not tastier."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827372</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827372</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1459</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-update"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-update"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"updatedKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"signingKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"upD4t3d.s1gNiNg.K3y/t3XT"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Updated Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but not tastier."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827360</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827401</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-update'</span> -i -X PUT -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI2Yzk3MjJjYi0yMzc1LTRlYzktOTRlOS1iZjI1NzE1YjVjNTQiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJjNGNkZjQ3YyIsImlhdCI6MTQ1ODM0NjgyNywiZXhwIjoxNDU4MzkwMDI3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.8QY8eCKjvlewKT_k5HnX_-GcB3-BvMML_BYPSZBXFHM'</span> -H <span class="s1">'Content-Type: application/json'</span> -d <span class="s1">'{
+  "subdomain" : "twiglet-update",
+  "config" : {
+    "tokenPolicy" : {
+      "accessTokenValidity" : -1,
+      "refreshTokenValidity" : -1,
+      "activeKeyId" : null,
+      "keys" : {
+        "updatedKeyId" : {
+          "signingKey" : "upD4t3d.s1gNiNg.K3y/t3XT"
+        }
+      }
+    },
+    "samlConfig" : {
+      "assertionSigned" : true,
+      "requestSigned" : true,
+      "wantAssertionSigned" : false,
+      "wantAuthnRequestSigned" : false,
+      "assertionTimeToLiveSeconds" : 600,
+      "certificate" : null,
+      "privateKey" : null,
+      "privateKeyPassword" : null
+    },
+    "links" : {
+      "logout" : {
+        "redirectUrl" : "/login",
+        "redirectParameterName" : "redirect",
+        "disableRedirectParameter" : true,
+        "whitelist" : null
+      },
+      "selfService" : {
+        "selfServiceLinksEnabled" : true,
+        "signup" : "/create_account",
+        "passwd" : "/forgot_password"
+      }
+    },
+    "prompts" : [ {
+      "name" : "username",
+      "type" : "text",
+      "text" : "Email"
+    }, {
+      "name" : "password",
+      "type" : "password",
+      "text" : "Password"
+    }, {
+      "name" : "passcode",
+      "type" : "password",
+      "text" : "One Time Code (Get on at /passcode)"
+    } ]
+  },
+  "name" : "The Updated Twiglet Zone",
+  "version" : 0,
+  "description" : "Like the Twilight Zone but not tastier.",
+  "created" : 1458346827372,
+  "last_modified" : 1458346827372
+}'</span>
+</code></pre>
+
+<p><em>Path Parameters</em></p>
+
+<p>/identity-zones/{id}</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique ID of the identity zone to update</td>
+</tr>
+</tbody></table>
+
+<p><em>Request Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer token containing <code class="prettyprint">zones.write</code> or <code class="prettyprint">zones.&lt;zone id&gt;.admin</code></td>
+</tr>
+</tbody></table>
+
+<p><em>Request Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>subdomain</td>
+<td>String</td>
+<td>Required</td>
+<td>Unique subdomain for the running instance. May only contain legal characters for a subdomain name.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Required</td>
+<td>Human-readable zone name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Optional</td>
+<td>Description of the zone</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Number</td>
+<td>Optional</td>
+<td>Reserved for future use of E-Tag versioning</td>
+</tr>
+<tr>
+<td>config.tokenPolicy</td>
+<td>Object</td>
+<td>Optional</td>
+<td>Various fields pertaining to the JWT access and refresh tokens.</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.activeKeyId</td>
+<td>String</td>
+<td>Required if <code class="prettyprint">config.tokenPolicy.keys</code> are set</td>
+<td>The ID for the key that is being used to sign tokens</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.keys</td>
+<td>Object</td>
+<td>Optional</td>
+<td>Keys which will be used to sign the token</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.accessTokenValidity</td>
+<td>Number</td>
+<td>Optional</td>
+<td>Time in seconds between when a access token is issued and when it expires. Defaults to global <code class="prettyprint">accessTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.tokenPolicy.refreshTokenValidity</td>
+<td>Number</td>
+<td>Optional</td>
+<td>Time in seconds between when a refresh token is issued and when it expires. Defaults to global <code class="prettyprint">refreshTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>If <code class="prettyprint">true</code>, the SAML provider will sign all assertions</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAssertionSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, all assertions received by the SAML provider must be signed. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.requestSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, the service provider will sign all outgoing authentication requests. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAuthnRequestSigned</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>If <code class="prettyprint">true</code>, the authentication request from the partner service provider must be signed.</td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionTimeToLiveSeconds</td>
+<td>Number</td>
+<td>Optional</td>
+<td>The lifetime of a SAML assertion in seconds. Defaults to 600.</td>
+</tr>
+<tr>
+<td>config.samlConfig.certificate</td>
+<td>String</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. The certificate used to sign all communications.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKey</td>
+<td>String</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKeyPassword</td>
+<td>String</td>
+<td>Optional</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key password. Reserved for future use.</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectUrl</td>
+<td>String</td>
+<td>Optional</td>
+<td>Logout redirect url</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectParameterName</td>
+<td>String</td>
+<td>Optional</td>
+<td>Changes the name of the redirect parameter</td>
+</tr>
+<tr>
+<td>config.links.logout.disableRedirectParameter</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Whether or not to allow the redirect parameter on logout</td>
+</tr>
+<tr>
+<td>config.links.logout.whitelist</td>
+<td>Array</td>
+<td>Optional</td>
+<td>List of allowed whitelist redirects</td>
+</tr>
+<tr>
+<td>config.links.selfService.selfServiceLinksEnabled</td>
+<td>Boolean</td>
+<td>Optional</td>
+<td>Whether or not users are allowed to sign up or reset their passwords via the UI</td>
+</tr>
+<tr>
+<td>config.links.selfService.signup</td>
+<td>String</td>
+<td>Optional</td>
+<td>Where users are directed upon clicking the account creation link</td>
+</tr>
+<tr>
+<td>config.links.selfService.passwd</td>
+<td>String</td>
+<td>Optional</td>
+<td>Where users are directed upon clicking the password reset link</td>
+</tr>
+<tr>
+<td>config.prompts[]</td>
+<td>Array</td>
+<td>Optional</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>config.prompts[].name</td>
+<td>String</td>
+<td>Optional</td>
+<td>Name of field</td>
+</tr>
+<tr>
+<td>config.prompts[].type</td>
+<td>String</td>
+<td>Optional</td>
+<td>What kind of field this is (e.g. text or password)</td>
+</tr>
+<tr>
+<td>config.prompts[].text</td>
+<td>String</td>
+<td>Optional</td>
+<td>Actual text displayed on prompt for field</td>
+</tr>
+</tbody></table>
+
+<p><em>Response Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Unique ID of the identity zone</td>
+</tr>
+<tr>
+<td>subdomain</td>
+<td>String</td>
+<td>Unique subdomain for the running instance. May only contain legal characters for a subdomain name.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Human-readable zone name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Description of the zone</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Number</td>
+<td>Reserved for future use of E-Tag versioning</td>
+</tr>
+<tr>
+<td>config.tokenPolicy</td>
+<td>Object</td>
+<td>Various fields pertaining to the JWT access and refresh tokens.</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.activeKeyId</td>
+<td>String</td>
+<td>The ID for the key that is being used to sign tokens</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.keys</td>
+<td>Object</td>
+<td>Keys which will be used to sign the token</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.accessTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a access token is issued and when it expires. Defaults to global <code class="prettyprint">accessTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.tokenPolicy.refreshTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a refresh token is issued and when it expires. Defaults to global <code class="prettyprint">refreshTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the SAML provider will sign all assertions</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAssertionSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, all assertions received by the SAML provider must be signed. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.requestSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, the service provider will sign all outgoing authentication requests. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAuthnRequestSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the authentication request from the partner service provider must be signed.</td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionTimeToLiveSeconds</td>
+<td>Number</td>
+<td>The lifetime of a SAML assertion in seconds. Defaults to 600.</td>
+</tr>
+<tr>
+<td>config.samlConfig.certificate</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The certificate used to sign all communications.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKey</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKeyPassword</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key password. Reserved for future use.</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectUrl</td>
+<td>String</td>
+<td>Logout redirect url</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectParameterName</td>
+<td>String</td>
+<td>Changes the name of the redirect parameter</td>
+</tr>
+<tr>
+<td>config.links.logout.disableRedirectParameter</td>
+<td>Boolean</td>
+<td>Whether or not to allow the redirect parameter on logout</td>
+</tr>
+<tr>
+<td>config.links.logout.whitelist</td>
+<td>Array</td>
+<td>List of allowed whitelist redirects</td>
+</tr>
+<tr>
+<td>config.links.selfService.selfServiceLinksEnabled</td>
+<td>Boolean</td>
+<td>Whether or not users are allowed to sign up or reset their passwords via the UI</td>
+</tr>
+<tr>
+<td>config.links.selfService.signup</td>
+<td>String</td>
+<td>Where users are directed upon clicking the account creation link</td>
+</tr>
+<tr>
+<td>config.links.selfService.passwd</td>
+<td>String</td>
+<td>Where users are directed upon clicking the password reset link</td>
+</tr>
+<tr>
+<td>config.prompts[]</td>
+<td>Array</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>config.prompts[].name</td>
+<td>String</td>
+<td>Name of field</td>
+</tr>
+<tr>
+<td>config.prompts[].type</td>
+<td>String</td>
+<td>What kind of field this is (e.g. text or password)</td>
+</tr>
+<tr>
+<td>config.prompts[].text</td>
+<td>String</td>
+<td>Actual text displayed on prompt for field</td>
+</tr>
+</tbody></table>
+
+<p><em>Error Codes</em></p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - Invalid token</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - Insufficient scope (zone admins can only update own zone)</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found - Update to nonexistent zone</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Unprocessable Entity - Invalid zone details</td>
+</tr>
+</tbody></table>
+
+<h2 id="deleting-an-identity-zone">Deleting an Identity Zone</h2>
+<pre class="highlight http"><code><span class="nf">DELETE</span> <span class="nn">/identity-zones/twiglet-delete</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiMGU5YWQ2OC02NGJmLTQxNGUtOWZmMC1iOWM5ZWZmYjNlMGIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJjNGNkZjQ3YyIsImlhdCI6MTQ1ODM0NjgyNywiZXhwIjoxNDU4MzkwMDI3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.uVSJnRl325aaeQ6US7RbuMYRIkymX5uo13OnjdZjyGI</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">1295</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-delete"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-delete"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"config"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tokenPolicy"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"accessTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"refreshTokenValidity"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"activeKeyId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"keys"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"samlConfig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"assertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"requestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAssertionSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"wantAuthnRequestSigned"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"assertionTimeToLiveSeconds"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"certificate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKey"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"privateKeyPassword"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"links"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"logout"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"redirectUrl"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/login"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"redirectParameterName"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"redirect"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"disableRedirectParameter"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"whitelist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"selfService"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"selfServiceLinksEnabled"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"signup"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/create_account"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"passwd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/forgot_password"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"prompts"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"username"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Email"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Password"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"passcode"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"One Time Code (Get on at /passcode)"</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827018</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1458346827018</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-delete'</span> -i -X DELETE -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiMGU5YWQ2OC02NGJmLTQxNGUtOWZmMC1iOWM5ZWZmYjNlMGIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiJjNGNkZjQ3YyIsImlhdCI6MTQ1ODM0NjgyNywiZXhwIjoxNDU4MzkwMDI3LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.uVSJnRl325aaeQ6US7RbuMYRIkymX5uo13OnjdZjyGI'</span> -H <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+
+<p><em>Path Parameters</em></p>
+
+<p>/identity-zones/{id}</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Unique ID of the identity zone to delete</td>
+</tr>
+</tbody></table>
+
+<p><em>Request Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer token containing <code class="prettyprint">zones.write</code></td>
+</tr>
+</tbody></table>
+
+<p><em>Response Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>Unique ID of the identity zone</td>
+</tr>
+<tr>
+<td>subdomain</td>
+<td>String</td>
+<td>Unique subdomain for the running instance. May only contain legal characters for a subdomain name.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Human-readable zone name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>Description of the zone</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Number</td>
+<td>Reserved for future use of E-Tag versioning</td>
+</tr>
+<tr>
+<td>config.tokenPolicy</td>
+<td>Object</td>
+<td>Various fields pertaining to the JWT access and refresh tokens.</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.activeKeyId</td>
+<td>String</td>
+<td>The ID for the key that is being used to sign tokens</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.keys</td>
+<td>Object</td>
+<td>Keys which will be used to sign the token</td>
+</tr>
+<tr>
+<td>config.tokenPolicy.accessTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a access token is issued and when it expires. Defaults to global <code class="prettyprint">accessTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.tokenPolicy.refreshTokenValidity</td>
+<td>Number</td>
+<td>Time in seconds between when a refresh token is issued and when it expires. Defaults to global <code class="prettyprint">refreshTokenValidity</code></td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the SAML provider will sign all assertions</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAssertionSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, all assertions received by the SAML provider must be signed. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.requestSigned</td>
+<td>Boolean</td>
+<td>Exposed SAML metadata property. If <code class="prettyprint">true</code>, the service provider will sign all outgoing authentication requests. Defaults to <code class="prettyprint">true</code>.</td>
+</tr>
+<tr>
+<td>config.samlConfig.wantAuthnRequestSigned</td>
+<td>Boolean</td>
+<td>If <code class="prettyprint">true</code>, the authentication request from the partner service provider must be signed.</td>
+</tr>
+<tr>
+<td>config.samlConfig.assertionTimeToLiveSeconds</td>
+<td>Number</td>
+<td>The lifetime of a SAML assertion in seconds. Defaults to 600.</td>
+</tr>
+<tr>
+<td>config.samlConfig.certificate</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The certificate used to sign all communications.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKey</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key.</td>
+</tr>
+<tr>
+<td>config.samlConfig.privateKeyPassword</td>
+<td>String</td>
+<td>Exposed SAML metadata property. The SAML provider&rsquo;s private key password. Reserved for future use.</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectUrl</td>
+<td>String</td>
+<td>Logout redirect url</td>
+</tr>
+<tr>
+<td>config.links.logout.redirectParameterName</td>
+<td>String</td>
+<td>Changes the name of the redirect parameter</td>
+</tr>
+<tr>
+<td>config.links.logout.disableRedirectParameter</td>
+<td>Boolean</td>
+<td>Whether or not to allow the redirect parameter on logout</td>
+</tr>
+<tr>
+<td>config.links.logout.whitelist</td>
+<td>Array</td>
+<td>List of allowed whitelist redirects</td>
+</tr>
+<tr>
+<td>config.links.selfService.selfServiceLinksEnabled</td>
+<td>Boolean</td>
+<td>Whether or not users are allowed to sign up or reset their passwords via the UI</td>
+</tr>
+<tr>
+<td>config.links.selfService.signup</td>
+<td>String</td>
+<td>Where users are directed upon clicking the account creation link</td>
+</tr>
+<tr>
+<td>config.links.selfService.passwd</td>
+<td>String</td>
+<td>Where users are directed upon clicking the password reset link</td>
+</tr>
+<tr>
+<td>config.prompts[]</td>
+<td>Array</td>
+<td>List of fields that users are prompted for to login. Defaults to username, password, and passcode.</td>
+</tr>
+<tr>
+<td>config.prompts[].name</td>
+<td>String</td>
+<td>Name of field</td>
+</tr>
+<tr>
+<td>config.prompts[].type</td>
+<td>String</td>
+<td>What kind of field this is (e.g. text or password)</td>
+</tr>
+<tr>
+<td>config.prompts[].text</td>
+<td>String</td>
+<td>Actual text displayed on prompt for field</td>
+</tr>
+</tbody></table>
+
+<p><em>Error Codes</em></p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized - Invalid token</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden - Insufficient scope (zone admins can only delete their own zone)</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found - Zone does not exist</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
