@@ -67,7 +67,7 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">http://redirect.to/app?code=0qq5aG</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://redirect.to/app?code=KBDIK2</span>
 
 </code></pre>
 
@@ -108,10 +108,10 @@
 </tbody></table>
 
 <h3 id="api-flow">Api flow</h3>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=HpFseE'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkYzkxZmE1Yy04ZmQ0LTQ0YjEtOGYzNy04NjExNTE2YjAyMGYiLCJzdWIiOiJhZDgwNzRkMC05MzI1LTQ2YzgtOTFjMS01ZjU0YTMzYjlmMjEiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiYWQ4MDc0ZDAtOTMyNS00NmM4LTkxYzEtNWY1NGEzM2I5ZjIxIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIwMDEzNCwicmV2X3NpZyI6ImNkZWNiNTEwIiwiaWF0IjoxNDU5MjAwMTM0LCJleHAiOjE0NTkyNDMzMzQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.ErhHytHuixCfnqaur37FLS5BEfKrnAfhR5XeTI8ur0M'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=gr9XVl'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIwZjY3YmQ0OS1jZGY2LTQ4YjgtYmJkMC02MjcyNzMwYzRkNGIiLCJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMjI1MDFlOGYtN2U5MC00ZWFkLWI0YTItZjg5MWFlOTA1MDlmIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIxMDMzNiwicmV2X3NpZyI6ImZlMzU5OTJlIiwiaWF0IjoxNDU5MjEwMzM2LCJleHAiOjE0NTkyNTM1MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.mLHtyPh7YoEsku9yK4Rl69LJJH0qeeepH14UGODRt8Y'</span>
 </code></pre>
-<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=HpFseE</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkYzkxZmE1Yy04ZmQ0LTQ0YjEtOGYzNy04NjExNTE2YjAyMGYiLCJzdWIiOiJhZDgwNzRkMC05MzI1LTQ2YzgtOTFjMS01ZjU0YTMzYjlmMjEiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiYWQ4MDc0ZDAtOTMyNS00NmM4LTkxYzEtNWY1NGEzM2I5ZjIxIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIwMDEzNCwicmV2X3NpZyI6ImNkZWNiNTEwIiwiaWF0IjoxNDU5MjAwMTM0LCJleHAiOjE0NTkyNDMzMzQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.ErhHytHuixCfnqaur37FLS5BEfKrnAfhR5XeTI8ur0M</span>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code&amp;client_id=login&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf&amp;state=gr9XVl</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIwZjY3YmQ0OS1jZGY2LTQ4YjgtYmJkMC02MjcyNzMwYzRkNGIiLCJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJzY29wZSI6WyJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMjI1MDFlOGYtN2U5MC00ZWFkLWI0YTItZjg5MWFlOTA1MDlmIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoibWFyaXNzYSIsImVtYWlsIjoibWFyaXNzYUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIxMDMzNiwicmV2X3NpZyI6ImZlMzU5OTJlIiwiaWF0IjoxNDU5MjEwMzM2LCJleHAiOjE0NTkyNTM1MzYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2YiLCJ1YWEiXX0.mLHtyPh7YoEsku9yK4Rl69LJJH0qeeepH14UGODRt8Y</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
 </code></pre>
@@ -122,7 +122,7 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">https://uaa.cloudfoundry.com/redirect/cf?code=ExcOh7&amp;state=HpFseE</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">https://uaa.cloudfoundry.com/redirect/cf?code=eDM9ad&amp;state=gr9XVl</span>
 
 </code></pre>
 
@@ -200,7 +200,7 @@
 <span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
 <span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
 <span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
-<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1YzJhZTY5MC02NmU4LTRhNTktOTllMy02OTc4ZWU2ZDg1NGYiLCJzdWIiOiJhZDgwNzRkMC05MzI1LTQ2YzgtOTFjMS01ZjU0YTMzYjlmMjEiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6ImFkODA3NGQwLTkzMjUtNDZjOC05MWMxLTVmNTRhMzNiOWYyMSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiZmI4Y2RiZjQiLCJpYXQiOjE0NTkyMDAxMzQsImV4cCI6MTQ1OTI0MzMzNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.IhqMSOrLUEfuDeMVNIixb_N3BKHaeGpwi1RK0Q5mDxo&amp;expires_in=43199&amp;jti=5c2ae690-66e8-4a59-99e3-6978ee6d854f</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI4Y2UxMTg3YS1jZTM4LTQzYWItOTkxZS0wNjE1MGFmMmViNDgiLCJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6IjIyNTAxZThmLTdlOTAtNGVhZC1iNGEyLWY4OTFhZTkwNTA5ZiIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiY2M3OGRhM2QiLCJpYXQiOjE0NTkyMTAzMzYsImV4cCI6MTQ1OTI1MzUzNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.L-GXG19wBnmsIPQzs8Kc2xSUL8Sv6vn5yyHrN9H4OLo&amp;expires_in=43199&amp;jti=8ce1187a-ce38-43ab-991e-06150af2eb48</span>
 
 </code></pre>
 
@@ -218,7 +218,7 @@
 <td>response_type</td>
 <td>String</td>
 <td>Required</td>
-<td>&ldquo;access token&rdquo;</td>
+<td>Expected response type, in this case &ldquo;token&rdquo;, i.e. an access token</td>
 </tr>
 <tr>
 <td>client_id</td>
@@ -254,17 +254,238 @@
 </tr>
 </tbody></table>
 
+<h2 id="openid-connect-flow">OpenID Connect flow</h2>
+
+<h3 id="id-token">ID token</h3>
+
+<p>The authorization request may specify a response type of id_token, and an ID token as defined
+  by OpenID Connect will be included in the fragment of the redirect URL.</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=id_token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
+</code></pre>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=id_token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">302</span> <span class="ne">Found</span>
+<span class="na">Strict-Transport-Security</span><span class="p">:</span> <span class="s">max-age=31536000</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-store</span>
+<span class="na">Pragma</span><span class="p">:</span><span class="s"> </span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;id_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJ1c2VyX25hbWUiOiJtYXJpc3NhIiwib3JpZ2luIjoidWFhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsImNsaWVudF9pZCI6ImFwcCIsImF1ZCI6WyJhcHAiXSwiemlkIjoidWFhIiwidXNlcl9pZCI6IjIyNTAxZThmLTdlOTAtNGVhZC1iNGEyLWY4OTFhZTkwNTA5ZiIsImF6cCI6ImFwcCIsInNjb3BlIjpbIm9wZW5pZCJdLCJleHAiOjE0NTkyNTM1MzYsImlhdCI6MTQ1OTIxMDMzNiwianRpIjoiNjIyOWVhNmQtYWZjZi00Mzc1LTllNTUtMWExYmE3YmUxMWI1IiwiZW1haWwiOiJtYXJpc3NhQHRlc3Qub3JnIiwicmV2X3NpZyI6ImNjNzhkYTNkIiwiY2lkIjoiYXBwIn0.LquaFxnaXe3qvCBtlACSnZtgAsxXoDFFLRRAd-ylKwM&amp;expires_in=43199&amp;jti=6229ea6d-afcf-4375-9e55-1a1ba7be11b5</span>
+
+</code></pre>
+
+<p><em>Request Parameters</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>response_type</td>
+<td>String</td>
+<td>Required</td>
+<td>Expected response type, in this case &ldquo;id_token&rdquo;</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>String</td>
+<td>Required</td>
+<td>a unique string representing the registration information provided by the client</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>String</td>
+<td>Optional</td>
+<td>requested scopes, space-delimited</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>String</td>
+<td>Optional</td>
+<td>redirection URI to which the authorization server will send the user-agent back once access is granted (or denied), optional if pre-registered by the client</td>
+</tr>
+</tbody></table>
+
+<p><em>Response Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Location</td>
+<td>Location as defined in the spec includes id_token in the reply fragment if successful</td>
+</tr>
+</tbody></table>
+
+<h3 id="with-authorization-code-grant">With authorization code grant</h3>
+
+<p>The request may specify that the client expects an ID token as defined by OpenID Connect, and this
+  ID token will be included alongside the authorization code.</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=code+id_token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
+</code></pre>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=code+id_token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">302</span> <span class="ne">Found</span>
+<span class="na">Strict-Transport-Security</span><span class="p">:</span> <span class="s">max-age=31536000</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-store</span>
+<span class="na">Pragma</span><span class="p">:</span><span class="s"> </span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;id_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJ1c2VyX25hbWUiOiJtYXJpc3NhIiwib3JpZ2luIjoidWFhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsImNsaWVudF9pZCI6ImFwcCIsImF1ZCI6WyJhcHAiXSwiemlkIjoidWFhIiwidXNlcl9pZCI6IjIyNTAxZThmLTdlOTAtNGVhZC1iNGEyLWY4OTFhZTkwNTA5ZiIsImF6cCI6ImFwcCIsInNjb3BlIjpbIm9wZW5pZCJdLCJleHAiOjE0NTkyNTM1MzYsImlhdCI6MTQ1OTIxMDMzNiwianRpIjoiZDA4YzQyOTMtMDEyMC00YTgzLWI2MjYtMTU4OWUwYTgyNTMwIiwiZW1haWwiOiJtYXJpc3NhQHRlc3Qub3JnIiwicmV2X3NpZyI6ImNjNzhkYTNkIiwiY2lkIjoiYXBwIn0.Vu-z0mepHNRKnlmwJW8mfJj_EnoAPA0jHnFeJYnYvJA&amp;code=X9guKb&amp;expires_in=43199&amp;jti=d08c4293-0120-4a83-b626-1589e0a82530</span>
+
+</code></pre>
+
+<p><em>Request Parameters</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>response_type</td>
+<td>String</td>
+<td>Required</td>
+<td>Expected response type, in this case &ldquo;id_token code&rdquo;, indicating a request for an ID token and an authorization code.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>String</td>
+<td>Required</td>
+<td>a unique string representing the registration information provided by the client</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>String</td>
+<td>Optional</td>
+<td>requested scopes, space-delimited</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>String</td>
+<td>Optional</td>
+<td>redirection URI to which the authorization server will send the user-agent back once access is granted (or denied), optional if pre-registered by the client</td>
+</tr>
+</tbody></table>
+
+<p><em>Response Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Location</td>
+<td>Location as defined in the spec includes code and id_token in the reply fragment if successful</td>
+</tr>
+</tbody></table>
+
+<h3 id="with-implicit-grant">With implicit grant</h3>
+
+<p>The request may specify that the client expects an ID token as defined by OpenID Connect, and this
+  ID token will be included alongside the access token.</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/authorize?response_type=token+id_token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F'</span> -i -H <span class="s1">'Accept: application/x-www-form-urlencoded'</span>
+</code></pre>
+<pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/oauth/authorize?response_type=token+id_token&amp;client_id=app&amp;scope=openid&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fapp%2F</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">302</span> <span class="ne">Found</span>
+<span class="na">Strict-Transport-Security</span><span class="p">:</span> <span class="s">max-age=31536000</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-store</span>
+<span class="na">Pragma</span><span class="p">:</span><span class="s"> </span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Location</span><span class="p">:</span> <span class="s">http://localhost:8080/app/#token_type=bearer&amp;access_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxMWNmZGE5ZS05NDI1LTRiMTMtODg3Mi1jOWQzMjE3YWNmNmEiLCJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJzY29wZSI6WyJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwidXNlcl9pZCI6IjIyNTAxZThmLTdlOTAtNGVhZC1iNGEyLWY4OTFhZTkwNTA5ZiIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiY2M3OGRhM2QiLCJpYXQiOjE0NTkyMTAzMzYsImV4cCI6MTQ1OTI1MzUzNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJvcGVuaWQiXX0.arUszz6Fw1uzdrEIiZ0YxyQt15gkiBLJCQ9cftHXhBk&amp;id_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIyMjUwMWU4Zi03ZTkwLTRlYWQtYjRhMi1mODkxYWU5MDUwOWYiLCJ1c2VyX25hbWUiOiJtYXJpc3NhIiwib3JpZ2luIjoidWFhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsImNsaWVudF9pZCI6ImFwcCIsImF1ZCI6WyJhcHAiXSwiemlkIjoidWFhIiwidXNlcl9pZCI6IjIyNTAxZThmLTdlOTAtNGVhZC1iNGEyLWY4OTFhZTkwNTA5ZiIsImF6cCI6ImFwcCIsInNjb3BlIjpbIm9wZW5pZCJdLCJleHAiOjE0NTkyNTM1MzYsImlhdCI6MTQ1OTIxMDMzNiwianRpIjoiMTFjZmRhOWUtOTQyNS00YjEzLTg4NzItYzlkMzIxN2FjZjZhIiwiZW1haWwiOiJtYXJpc3NhQHRlc3Qub3JnIiwicmV2X3NpZyI6ImNjNzhkYTNkIiwiY2lkIjoiYXBwIn0.qqmWCSmszxIBXlzF2N10iCB63r5hpMQYyfzFiamzFrE&amp;expires_in=43199&amp;jti=11cfda9e-9425-4b13-8872-c9d3217acf6a</span>
+
+</code></pre>
+
+<p><em>Request Parameters</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>response_type</td>
+<td>String</td>
+<td>Required</td>
+<td>Expected response type, in this case &ldquo;token id_token&rdquo;, indicating both an access token and an ID token.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>String</td>
+<td>Required</td>
+<td>a unique string representing the registration information provided by the client</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>String</td>
+<td>Optional</td>
+<td>requested scopes, space-delimited</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>String</td>
+<td>Optional</td>
+<td>redirection URI to which the authorization server will send the user-agent back once access is granted (or denied), optional if pre-registered by the client</td>
+</tr>
+</tbody></table>
+
+<p><em>Response Headers</em></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Location</td>
+<td>Location as defined in the spec includes access_token and id_token in the reply fragment if successful</td>
+</tr>
+</tbody></table>
+
 <h1 id="token">Token</h1>
 
 <h2 id="authorization-code-grant">Authorization Code Grant</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=GdmnDe&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=4D0hMc&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/oauth/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=GdmnDe&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf
+client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=token&amp;code=4D0hMc&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -279,12 +500,12 @@ client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1668</span>
 
 <span class="p">{</span><span class="w">
-  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJjYTU4OWM3Ni0wMTg1LTQ1MzctODQ5OS0zYWMwZGFiODRhNGEiLCJzdWIiOiI4MjkyMGFlMS03YjkyLTQ0MGQtOTU0Ny05MzZhMmM5MzQ2ZGEiLCJzY29wZSI6WyJvcGVuaWQiLCJvYXV0aC5hcHByb3ZhbHMiXSwiY2xpZW50X2lkIjoibG9naW4iLCJjaWQiOiJsb2dpbiIsImF6cCI6ImxvZ2luIiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInVzZXJfaWQiOiI4MjkyMGFlMS03YjkyLTQ0MGQtOTU0Ny05MzZhMmM5MzQ2ZGEiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJmVlh3ajlAdGVzdC5vcmciLCJlbWFpbCI6ImZWWHdqOUB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIwMDE0NSwicmV2X3NpZyI6ImJhMDQzYTg5IiwiaWF0IjoxNDU5MjAwMTQ1LCJleHAiOjE0NTkyNDMzNDUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsib3BlbmlkIiwibG9naW4iLCJvYXV0aCJdfQ.rXDFyvmmDErmGR4schWRmdzd7xDP0CIbKYNVt1_x7cM"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJhMDdmMjUxZi0wMzhhLTQzNzEtYmM4OS1iMTU4ZWNjNzM5MDgiLCJzdWIiOiJkMTA4MzM2Ny1jMGE0LTQ4OTktYWM5Mi02YzNmZGI1NjdhMjkiLCJzY29wZSI6WyJvcGVuaWQiLCJvYXV0aC5hcHByb3ZhbHMiXSwiY2xpZW50X2lkIjoibG9naW4iLCJjaWQiOiJsb2dpbiIsImF6cCI6ImxvZ2luIiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInVzZXJfaWQiOiJkMTA4MzM2Ny1jMGE0LTQ4OTktYWM5Mi02YzNmZGI1NjdhMjkiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJ3elNTRjBAdGVzdC5vcmciLCJlbWFpbCI6Ind6U1NGMEB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIxMDM0OSwicmV2X3NpZyI6IjVmMzlkNTY1IiwiaWF0IjoxNDU5MjEwMzQ5LCJleHAiOjE0NTkyNTM1NDksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsib3BlbmlkIiwibG9naW4iLCJvYXV0aCJdfQ.PR0uRCpL_8iutFwHLpiWLy3Ao4a3XXq9TjHzwlXTl-w"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIyZTIzYzNmNC0wYWYyLTQ5M2MtOWExMS1iZGU2OWJlNDIxMTMtciIsInN1YiI6IjgyOTIwYWUxLTdiOTItNDQwZC05NTQ3LTkzNmEyYzkzNDZkYSIsInNjb3BlIjpbIm9wZW5pZCIsIm9hdXRoLmFwcHJvdmFscyJdLCJpYXQiOjE0NTkyMDAxNDUsImV4cCI6MTQ2MTc5MjE0NSwiY2lkIjoibG9naW4iLCJjbGllbnRfaWQiOiJsb2dpbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwidXNlcl9uYW1lIjoiZlZYd2o5QHRlc3Qub3JnIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjgyOTIwYWUxLTdiOTItNDQwZC05NTQ3LTkzNmEyYzkzNDZkYSIsInJldl9zaWciOiJiYTA0M2E4OSIsImF1ZCI6WyJvcGVuaWQiLCJsb2dpbiIsIm9hdXRoIl19.cxczxRAlpTTRyzPYaZIlu8U0BHGmajqZpCYL-xGglzw"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIwYWEyMGExMi02NmQzLTRmOWQtYjllYS01OWE1Nzk4YTBmODMtciIsInN1YiI6ImQxMDgzMzY3LWMwYTQtNDg5OS1hYzkyLTZjM2ZkYjU2N2EyOSIsInNjb3BlIjpbIm9wZW5pZCIsIm9hdXRoLmFwcHJvdmFscyJdLCJpYXQiOjE0NTkyMTAzNDksImV4cCI6MTQ2MTgwMjM0OSwiY2lkIjoibG9naW4iLCJjbGllbnRfaWQiOiJsb2dpbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwidXNlcl9uYW1lIjoid3pTU0YwQHRlc3Qub3JnIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6ImQxMDgzMzY3LWMwYTQtNDg5OS1hYzkyLTZjM2ZkYjU2N2EyOSIsInJldl9zaWciOiI1ZjM5ZDU2NSIsImF1ZCI6WyJvcGVuaWQiLCJsb2dpbiIsIm9hdXRoIl19.qIXGflIAp0CBSgQKPQRFA179HR5DkLamopLi0B99Gf0"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
   </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"openid oauth.approvals"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ca589c76-0185-4537-8499-3ac0dab84a4a"</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"a07f251f-038a-4371-bc89-b158ecc73908"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -400,11 +621,11 @@ client_id=login&amp;client_secret=loginsecret&amp;grant_type=client_credentials&
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1327</span>
 
 <span class="p">{</span><span class="w">
-  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJkY2M4MWQ4Yi1kNTU1LTRiOTgtOTQ5MS02NjZkNGFjMDg0MmYiLCJzdWIiOiJsb2dpbiIsImF1dGhvcml0aWVzIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sImNsaWVudF9pZCI6ImxvZ2luIiwiY2lkIjoibG9naW4iLCJhenAiOiJsb2dpbiIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiYTNhZThjNWUiLCJpYXQiOjE0NTkyMDAxNDQsImV4cCI6MTQ1OTI0MzM0NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJsb2dpbiIsImNsaWVudHMiLCJlbWFpbHMiLCJzY2ltIiwicGFzc3dvcmQiLCJpZHBzIiwibm90aWZpY2F0aW9ucyIsIm9hdXRoIiwiY3JpdGljYWxfbm90aWZpY2F0aW9ucyJdfQ.sXL0-AbaUtqK6XgtWMi1Db32k-HouM5xpv1loxiWTmc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIwY2MwODM3OC04MmE2LTRkOGUtYTBkMC0zM2VlODliZWVmZTYiLCJzdWIiOiJsb2dpbiIsImF1dGhvcml0aWVzIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sInNjb3BlIjpbImNsaWVudHMucmVhZCIsImVtYWlscy53cml0ZSIsInNjaW0udXNlcmlkcyIsInBhc3N3b3JkLndyaXRlIiwiaWRwcy53cml0ZSIsIm5vdGlmaWNhdGlvbnMud3JpdGUiLCJvYXV0aC5sb2dpbiIsInNjaW0ud3JpdGUiLCJjcml0aWNhbF9ub3RpZmljYXRpb25zLndyaXRlIl0sImNsaWVudF9pZCI6ImxvZ2luIiwiY2lkIjoibG9naW4iLCJhenAiOiJsb2dpbiIsImdyYW50X3R5cGUiOiJjbGllbnRfY3JlZGVudGlhbHMiLCJyZXZfc2lnIjoiNmQ1MTdjMWIiLCJpYXQiOjE0NTkyMTAzNDgsImV4cCI6MTQ1OTI1MzU0OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJsb2dpbiIsImNsaWVudHMiLCJlbWFpbHMiLCJzY2ltIiwicGFzc3dvcmQiLCJpZHBzIiwibm90aWZpY2F0aW9ucyIsIm9hdXRoIiwiY3JpdGljYWxfbm90aWZpY2F0aW9ucyJdfQ.Li0WLYCDMRnaUMJUAVGFRp653YH4ANRzf0uT0YuDgwI"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
   </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"clients.read emails.write scim.userids password.write idps.write notifications.write oauth.login scim.write critical_notifications.write"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"dcc81d8b-d555-4b98-9491-666d4ac0842f"</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0cc08378-82a6-4d8e-a0d0-33ee89beefe6"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -481,14 +702,14 @@ client_id=login&amp;client_secret=loginsecret&amp;grant_type=client_credentials&
 </tbody></table>
 
 <h2 id="password-grant">Password Grant</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=pkcTY7%40test.org&amp;password=secr3T&amp;response_type=token'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=m1eY6k%40test.org&amp;password=secr3T&amp;response_type=token'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/oauth/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=pkcTY7%40test.org&amp;password=secr3T&amp;response_type=token
+client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;username=m1eY6k%40test.org&amp;password=secr3T&amp;response_type=token
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -503,12 +724,12 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;user
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1925</span>
 
 <span class="p">{</span><span class="w">
-  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJlZjEyZTc3Mi0zOWQyLTQ5MDUtOTMxYy1kYTMwMDk4NDk1OWIiLCJzdWIiOiIwOWFiMWMzNC1hMDM4LTRkOTgtOTQxYS02MTc1OThmZDRhZWIiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjA5YWIxYzM0LWEwMzgtNGQ5OC05NDFhLTYxNzU5OGZkNGFlYiIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6InBrY1RZN0B0ZXN0Lm9yZyIsImVtYWlsIjoicGtjVFk3QHRlc3Qub3JnIiwiYXV0aF90aW1lIjoxNDU5MjAwMTQ0LCJyZXZfc2lnIjoiZTk0YWI0M2UiLCJpYXQiOjE0NTkyMDAxNDQsImV4cCI6MTQ1OTI0MzM0NCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.5BYXBvvLAqXmAZW7Y_qY6gmOsiT7Zln8Pq_lS2zxrOs"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxODNkNjYyMy1jOWExLTRmMmYtOTlhMy0xMzA1ZjhiMGZhNmEiLCJzdWIiOiJlNDJiOTU1Mi0xZGQzLTQ3N2QtODY3YS1mZmYxZDQ5NzExZmQiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6ImU0MmI5NTUyLTFkZDMtNDc3ZC04NjdhLWZmZjFkNDk3MTFmZCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im0xZVk2a0B0ZXN0Lm9yZyIsImVtYWlsIjoibTFlWTZrQHRlc3Qub3JnIiwiYXV0aF90aW1lIjoxNDU5MjEwMzQ3LCJyZXZfc2lnIjoiNTVjYTFhYTMiLCJpYXQiOjE0NTkyMTAzNDcsImV4cCI6MTQ1OTI1MzU0NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.qvcSiw1i_dM0qAn5YaDmBWN2L2pmWxErnP7lb2X6DHo"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0MDFhMzJlZS01YThlLTQzZTgtOWJkOS1kMDY4OGE3NDk3OWYtciIsInN1YiI6IjA5YWIxYzM0LWEwMzgtNGQ5OC05NDFhLTYxNzU5OGZkNGFlYiIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMDAxNDQsImV4cCI6MTQ2MTc5MjE0NCwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6InBrY1RZN0B0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiIwOWFiMWMzNC1hMDM4LTRkOTgtOTQxYS02MTc1OThmZDRhZWIiLCJyZXZfc2lnIjoiZTk0YWI0M2UiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.QyBf1GTlhjysJe2k_dNAIJPtIW0vsLb61oohsfQpbV4"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIxYTQ1YWI5OC00MzRlLTQ1YTQtOTBiMy02N2Y0NmRkZWFiNDItciIsInN1YiI6ImU0MmI5NTUyLTFkZDMtNDc3ZC04NjdhLWZmZjFkNDk3MTFmZCIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMTAzNDcsImV4cCI6MTQ2MTgwMjM0NywiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6Im0xZVk2a0B0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiJlNDJiOTU1Mi0xZGQzLTQ3N2QtODY3YS1mZmYxZDQ5NzExZmQiLCJyZXZfc2lnIjoiNTVjYTFhYTMiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.P68DiQqbK0waYHHeDKNDkisx7RtzpaNhc9BDD3CYrQM"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
   </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"scim.userids openid cloud_controller.read password.write cloud_controller.write"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"ef12e772-39d2-4905-931c-da300984959b"</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"183d6623-c9a1-4f2f-99a3-1305f8b0fa6a"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -602,7 +823,7 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;user
 </tbody></table>
 
 <h3 id="one-time-passcode">One-time Passcode</h3>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -u <span class="s1">'app:appclientsecret'</span> -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'grant_type=password&amp;passcode=FTz9Up&amp;response_type=token'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -u <span class="s1">'app:appclientsecret'</span> -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'grant_type=password&amp;passcode=a66sxy&amp;response_type=token'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/oauth/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
@@ -610,7 +831,7 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=password&amp;user
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Basic YXBwOmFwcGNsaWVudHNlY3JldA==</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-grant_type=password&amp;passcode=FTz9Up&amp;response_type=token
+grant_type=password&amp;passcode=a66sxy&amp;response_type=token
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -625,12 +846,12 @@ grant_type=password&amp;passcode=FTz9Up&amp;response_type=token
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1874</span>
 
 <span class="p">{</span><span class="w">
-  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiMTA3NjIwMy02NjM0LTQxNjQtOGNmMy0xZDg0ZmUzMjFmMTIiLCJzdWIiOiJlY2U2MjNlNi1iMTNhLTRmYjItOGM0MC02MjBlOWExOWFiNTgiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6ImVjZTYyM2U2LWIxM2EtNGZiMi04YzQwLTYyMGU5YTE5YWI1OCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiYjA0MjdiNjAiLCJpYXQiOjE0NTkyMDAxNDMsImV4cCI6MTQ1OTI0MzM0MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.zH1DSa1TqO6Bt0Sz5mlEU9jM00zqeHi0D0puoBVr1lM"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0MjI1N2IwOS03OGQ5LTRkYzMtOGYzMC1kMWNmNThmY2NlMDgiLCJzdWIiOiIxYzI2MjNkOS1hMjhiLTRmMzgtOWEyYy1kYmJhYWMyOTQwYmIiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjFjMjYyM2Q5LWEyOGItNGYzOC05YTJjLWRiYmFhYzI5NDBiYiIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJyZXZfc2lnIjoiYWIyNWU2MmMiLCJpYXQiOjE0NTkyMTAzNDcsImV4cCI6MTQ1OTI1MzU0NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJhcHAiLCJzY2ltIiwib3BlbmlkIiwiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIl19.1kJh2R0oblgd9YflwjobZfoIYBoU5DEMtRBcKZ4CCBA"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI5MDIwMGUxOS04YWNjLTRkZGItOWJmOS0xNDBjZTEyMjlhZGYtciIsInN1YiI6ImVjZTYyM2U2LWIxM2EtNGZiMi04YzQwLTYyMGU5YTE5YWI1OCIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMDAxNDMsImV4cCI6MTQ2MTc5MjE0MywiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX2lkIjoiZWNlNjIzZTYtYjEzYS00ZmIyLThjNDAtNjIwZTlhMTlhYjU4IiwicmV2X3NpZyI6ImIwNDI3YjYwIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.6IG_b1NbzcKO0gaN5Ms3t51RoWpa8BI5ixPu25uICak"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiZGYwN2E4YS0xZTNjLTQ0MGMtYTBhOC1jY2ZkYjYxZjRkNjgtciIsInN1YiI6IjFjMjYyM2Q5LWEyOGItNGYzOC05YTJjLWRiYmFhYzI5NDBiYiIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMTAzNDcsImV4cCI6MTQ2MTgwMjM0NywiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX2lkIjoiMWMyNjIzZDktYTI4Yi00ZjM4LTlhMmMtZGJiYWFjMjk0MGJiIiwicmV2X3NpZyI6ImFiMjVlNjJjIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.Y3pz67PmHUBTUdUZKcuQG-BCwMhT2cGzNETEZvypsEY"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
   </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"scim.userids openid cloud_controller.read password.write cloud_controller.write"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"b1076203-6634-4164-8cf3-1d84fe321f12"</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"42257b09-78d9-4dc3-8f30-d1cf58fcce08"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -724,14 +945,14 @@ grant_type=password&amp;passcode=FTz9Up&amp;response_type=token
 </aside>
 
 <h2 id="refresh-token">Refresh Token</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=app&amp;client_secret=appclientsecret&amp;grant_type=refresh_token&amp;refresh_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiMzRiNTc0Mi0xODJmLTQ0YTItYTJhMi1jNTg5ZGFlNGEzZWQtciIsInN1YiI6ImFiZTJhNjU4LTRhMDItNDhhZS04MTFiLWYwNmYzZDc1MWJjNCIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMDAxNDUsImV4cCI6MTQ2MTc5MjE0NSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IlBxZlBqcEB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiJhYmUyYTY1OC00YTAyLTQ4YWUtODExYi1mMDZmM2Q3NTFiYzQiLCJyZXZfc2lnIjoiNjY0N2EzOGEiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.C_GKZZBro38rquhVEm5wORlEIwcf9NaQFRQaGFYxalE'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=app&amp;client_secret=appclientsecret&amp;grant_type=refresh_token&amp;refresh_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1NTczYzAyOC03MzBiLTRhZTAtYWQ4Ni1lNWRmN2Q5NzM0OTEtciIsInN1YiI6IjA1NTQ5ZGIzLWM1ZmUtNDQ1ZC04NTlkLWZiOTA0ZTk1ZmZmZiIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMTAzNDksImV4cCI6MTQ2MTgwMjM0OSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IkdRM0tEdUB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiIwNTU0OWRiMy1jNWZlLTQ0NWQtODU5ZC1mYjkwNGU5NWZmZmYiLCJyZXZfc2lnIjoiM2E5NzEzNjYiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.fPI1kPruSexvrugX_TK4gA1-HCp8gfJIPczahwAeQls'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/oauth/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
-client_id=app&amp;client_secret=appclientsecret&amp;grant_type=refresh_token&amp;refresh_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiMzRiNTc0Mi0xODJmLTQ0YTItYTJhMi1jNTg5ZGFlNGEzZWQtciIsInN1YiI6ImFiZTJhNjU4LTRhMDItNDhhZS04MTFiLWYwNmYzZDc1MWJjNCIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMDAxNDUsImV4cCI6MTQ2MTc5MjE0NSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IlBxZlBqcEB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiJhYmUyYTY1OC00YTAyLTQ4YWUtODExYi1mMDZmM2Q3NTFiYzQiLCJyZXZfc2lnIjoiNjY0N2EzOGEiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.C_GKZZBro38rquhVEm5wORlEIwcf9NaQFRQaGFYxalE
+client_id=app&amp;client_secret=appclientsecret&amp;grant_type=refresh_token&amp;refresh_token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1NTczYzAyOC03MzBiLTRhZTAtYWQ4Ni1lNWRmN2Q5NzM0OTEtciIsInN1YiI6IjA1NTQ5ZGIzLWM1ZmUtNDQ1ZC04NTlkLWZiOTA0ZTk1ZmZmZiIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMTAzNDksImV4cCI6MTQ2MTgwMjM0OSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IkdRM0tEdUB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiIwNTU0OWRiMy1jNWZlLTQ0NWQtODU5ZC1mYjkwNGU5NWZmZmYiLCJyZXZfc2lnIjoiM2E5NzEzNjYiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.fPI1kPruSexvrugX_TK4gA1-HCp8gfJIPczahwAeQls
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -746,12 +967,12 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=refresh_token&amp
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1895</span>
 
 <span class="p">{</span><span class="w">
-  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmMDg3ZTAxNC03MTAzLTQwOTQtYjIzOS0xMjQzMTAxNGU5YWMiLCJzdWIiOiJhYmUyYTY1OC00YTAyLTQ4YWUtODExYi1mMDZmM2Q3NTFiYzQiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6ImFiZTJhNjU4LTRhMDItNDhhZS04MTFiLWYwNmYzZDc1MWJjNCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6IlBxZlBqcEB0ZXN0Lm9yZyIsImVtYWlsIjoiUHFmUGpwQHRlc3Qub3JnIiwicmV2X3NpZyI6IjY2NDdhMzhhIiwiaWF0IjoxNDU5MjAwMTQ1LCJleHAiOjE0NTkyNDMzNDUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXBwIiwic2NpbSIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsIm9wZW5pZCJdfQ.Vn8oFITvQh4NzJzBZPJz7wMWhHz5UTQilz5WNO9gL2Y"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1ZWU1OTg2My1hYjNiLTQ1MjgtODNkYy02ZjliMTlmODE1MDEiLCJzdWIiOiIwNTU0OWRiMy1jNWZlLTQ0NWQtODU5ZC1mYjkwNGU5NWZmZmYiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjA1NTQ5ZGIzLWM1ZmUtNDQ1ZC04NTlkLWZiOTA0ZTk1ZmZmZiIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6IkdRM0tEdUB0ZXN0Lm9yZyIsImVtYWlsIjoiR1EzS0R1QHRlc3Qub3JnIiwicmV2X3NpZyI6IjNhOTcxMzY2IiwiaWF0IjoxNDU5MjEwMzQ5LCJleHAiOjE0NTkyNTM1NDksImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiYXBwIiwic2NpbSIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsIm9wZW5pZCJdfQ.zh6xVdJVmMkM6qomHA7TEQtrYKpS09dCQqc1ewvQPjc"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiMzRiNTc0Mi0xODJmLTQ0YTItYTJhMi1jNTg5ZGFlNGEzZWQtciIsInN1YiI6ImFiZTJhNjU4LTRhMDItNDhhZS04MTFiLWYwNmYzZDc1MWJjNCIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMDAxNDUsImV4cCI6MTQ2MTc5MjE0NSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IlBxZlBqcEB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiJhYmUyYTY1OC00YTAyLTQ4YWUtODExYi1mMDZmM2Q3NTFiYzQiLCJyZXZfc2lnIjoiNjY0N2EzOGEiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.C_GKZZBro38rquhVEm5wORlEIwcf9NaQFRQaGFYxalE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1NTczYzAyOC03MzBiLTRhZTAtYWQ4Ni1lNWRmN2Q5NzM0OTEtciIsInN1YiI6IjA1NTQ5ZGIzLWM1ZmUtNDQ1ZC04NTlkLWZiOTA0ZTk1ZmZmZiIsInNjb3BlIjpbInNjaW0udXNlcmlkcyIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJpYXQiOjE0NTkyMTAzNDksImV4cCI6MTQ2MTgwMjM0OSwiY2lkIjoiYXBwIiwiY2xpZW50X2lkIjoiYXBwIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3VhYS9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6IkdRM0tEdUB0ZXN0Lm9yZyIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiIwNTU0OWRiMy1jNWZlLTQ0NWQtODU5ZC1mYjkwNGU5NWZmZmYiLCJyZXZfc2lnIjoiM2E5NzEzNjYiLCJhdWQiOlsiYXBwIiwic2NpbSIsIm9wZW5pZCIsImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCJdfQ.fPI1kPruSexvrugX_TK4gA1-HCp8gfJIPczahwAeQls"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
   </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"scim.userids cloud_controller.read password.write cloud_controller.write openid"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"f087e014-7103-4094-b239-12431014e9ac"</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"5ee59863-ab3b-4528-83dc-6f9b19f81501"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -832,15 +1053,144 @@ client_id=app&amp;client_secret=appclientsecret&amp;grant_type=refresh_token&amp
 </tr>
 </tbody></table>
 
+<h2 id="openid-connect">OpenID Connect</h2>
+
+<p>The token endpoint can provide an ID token as defined by OpenID Connect.</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/oauth/token'</span> -i -X POST -H <span class="s1">'Accept: application/json'</span> -H <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> -d <span class="s1">'client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=id_token&amp;code=1pcaqY&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf'</span>
+</code></pre>
+<pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/oauth/token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Accept</span><span class="p">:</span> <span class="s">application/json</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
+
+client_id=login&amp;client_secret=loginsecret&amp;grant_type=authorization_code&amp;response_type=id_token&amp;code=1pcaqY&amp;redirect_uri=https%3A%2F%2Fuaa.cloudfoundry.com%2Fredirect%2Fcf
+</code></pre>
+<pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-store</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Expires</span><span class="p">:</span> <span class="s">0</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">DENY</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json;charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="p">:</span> <span class="s">2421</span>
+
+<span class="p">{</span><span class="w">
+  </span><span class="nt">"access_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJhYTU2ZDQ5OC0yMzc3LTRlYjgtOGFiNS03OTczNGZlMTIwNDEiLCJzdWIiOiIyZjBkZWM5YS01NmNjLTQ0ZWEtODU2Yi0zMDhlYzRjZWJhMWIiLCJzY29wZSI6WyJvcGVuaWQiLCJvYXV0aC5hcHByb3ZhbHMiXSwiY2xpZW50X2lkIjoibG9naW4iLCJjaWQiOiJsb2dpbiIsImF6cCI6ImxvZ2luIiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInVzZXJfaWQiOiIyZjBkZWM5YS01NmNjLTQ0ZWEtODU2Yi0zMDhlYzRjZWJhMWIiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJoN1RUUWpAdGVzdC5vcmciLCJlbWFpbCI6Img3VFRRakB0ZXN0Lm9yZyIsImF1dGhfdGltZSI6MTQ1OTIxMDM0OCwicmV2X3NpZyI6IjMzNDU4ZWMxIiwiaWF0IjoxNDU5MjEwMzQ4LCJleHAiOjE0NTkyNTM1NDgsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsib3BlbmlkIiwibG9naW4iLCJvYXV0aCJdfQ.4gZ-JGs97KxAtYZyQvG0hmVAWypbDR_pcbZv0gXkUqo"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"token_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIyZjBkZWM5YS01NmNjLTQ0ZWEtODU2Yi0zMDhlYzRjZWJhMWIiLCJ1c2VyX25hbWUiOiJoN1RUUWpAdGVzdC5vcmciLCJvcmlnaW4iOiJ1YWEiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiY2xpZW50X2lkIjoibG9naW4iLCJhdWQiOlsibG9naW4iXSwiemlkIjoidWFhIiwiZ3JhbnRfdHlwZSI6ImF1dGhvcml6YXRpb25fY29kZSIsInVzZXJfaWQiOiIyZjBkZWM5YS01NmNjLTQ0ZWEtODU2Yi0zMDhlYzRjZWJhMWIiLCJhenAiOiJsb2dpbiIsInNjb3BlIjpbIm9wZW5pZCJdLCJhdXRoX3RpbWUiOjE0NTkyMTAzNDgsImV4cCI6MTQ1OTI1MzU0OCwiaWF0IjoxNDU5MjEwMzQ4LCJqdGkiOiJhYTU2ZDQ5OC0yMzc3LTRlYjgtOGFiNS03OTczNGZlMTIwNDEiLCJlbWFpbCI6Img3VFRRakB0ZXN0Lm9yZyIsInJldl9zaWciOiIzMzQ1OGVjMSIsImNpZCI6ImxvZ2luIn0.Xy-_f_qBcmGUEUsSSSIsVJi1GhUjSASPTVcQtLs8zSY"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refresh_token"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI4M2Y5MGE0OC1mZmFiLTRiYjEtOTBkYi1mMmYyZjVlNjllNDQtciIsInN1YiI6IjJmMGRlYzlhLTU2Y2MtNDRlYS04NTZiLTMwOGVjNGNlYmExYiIsInNjb3BlIjpbIm9wZW5pZCIsIm9hdXRoLmFwcHJvdmFscyJdLCJpYXQiOjE0NTkyMTAzNDgsImV4cCI6MTQ2MTgwMjM0OCwiY2lkIjoibG9naW4iLCJjbGllbnRfaWQiOiJsb2dpbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwidXNlcl9uYW1lIjoiaDdUVFFqQHRlc3Qub3JnIiwib3JpZ2luIjoidWFhIiwidXNlcl9pZCI6IjJmMGRlYzlhLTU2Y2MtNDRlYS04NTZiLTMwOGVjNGNlYmExYiIsInJldl9zaWciOiIzMzQ1OGVjMSIsImF1ZCI6WyJvcGVuaWQiLCJsb2dpbiIsIm9hdXRoIl19.XR6nkLzp93nsVn0yMeatZB_f0m01RTD9b2UFiQtTURw"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"expires_in"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">43199</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"openid oauth.approvals"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"aa56d498-2377-4eb8-8ab5-79734fe12041"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p><em>Request Parameters</em></p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Constraints</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>response_type</td>
+<td>String</td>
+<td>Required</td>
+<td>the type of token that should be issued.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>String</td>
+<td>Required</td>
+<td>a unique string representing the registration information provided by the client</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>String</td>
+<td>Required if provided on authorization request</td>
+<td>redirection URI to which the authorization server will send the user-agent back once access is granted (or denied)</td>
+</tr>
+<tr>
+<td>code</td>
+<td>String</td>
+<td>Required</td>
+<td>the authorization code, obtained from /oauth/authorize, issued for the user</td>
+</tr>
+<tr>
+<td>grant_type</td>
+<td>String</td>
+<td>Required</td>
+<td>the type of authentication being used to obtain the token, in this case <code class="prettyprint">authorization_code</code></td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>String</td>
+<td>Required</td>
+<td>the secret passphrase configured for the OAuth client</td>
+</tr>
+</tbody></table>
+
+<p><em>Response Fields</em></p>
+
+<table><thead>
+<tr>
+<th>Path</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>String</td>
+<td>the access token for the user to whom the authorization code was issued</td>
+</tr>
+<tr>
+<td>id_token</td>
+<td>String</td>
+<td>the OpenID Connect ID token for the user to whom the authorization code was issued</td>
+</tr>
+<tr>
+<td>token_type</td>
+<td>String</td>
+<td>the type of the access token issued, i.e. <code class="prettyprint">bearer</code></td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>Number</td>
+<td>number of seconds until token expiry</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>String</td>
+<td>space-delimited list of scopes authorized by the user for this client</td>
+</tr>
+<tr>
+<td>refresh_token</td>
+<td>String</td>
+<td>an OAuth refresh token for refresh grants</td>
+</tr>
+<tr>
+<td>jti</td>
+<td>String</td>
+<td>a globally unique identifier for this token</td>
+</tr>
+</tbody></table>
+
 <h1 id="check-token">Check Token</h1>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/check_token'</span> -i -u <span class="s1">'app:appclientsecret'</span> -X POST -d <span class="s1">'token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmMjY1Y2EzZi03MTQ1LTRhMjgtYWNiYS04YjFlNjQyZDk5ZDciLCJzdWIiOiIzMTJkOTY2MC0wZTIzLTRkN2ItODBjOC1mYmYzOGYyYzBkNTUiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMxMmQ5NjYwLTBlMjMtNGQ3Yi04MGM4LWZiZjM4ZjJjMGQ1NSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJhdXRoX3RpbWUiOjE0NTkyMDAxMDksInJldl9zaWciOiI4ZDFjMzNhYyIsImlhdCI6MTQ1OTIwMDEwOSwiZXhwIjoxNDU5MjQzMzA5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.6KOTBc5B4Qblg7OUn2Q_lMJEloDmPWbeh0ifHhzbslI&amp;scopes=password.write%2Cscim.userids'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/check_token'</span> -i -u <span class="s1">'app:appclientsecret'</span> -X POST -d <span class="s1">'token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJlNjBiMWYyNC0yOGEzLTQ3YjktOWFhOC00NGMzYmZkMmUxZTQiLCJzdWIiOiIyZTQwZDdkOS00NDJhLTRkNWQtOGQ2My00NTk0NTc2NjliY2EiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjJlNDBkN2Q5LTQ0MmEtNGQ1ZC04ZDYzLTQ1OTQ1NzY2OWJjYSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJhdXRoX3RpbWUiOjE0NTkyMTAzMTIsInJldl9zaWciOiI4NTBiOTVkYyIsImlhdCI6MTQ1OTIxMDMxMiwiZXhwIjoxNDU5MjUzNTEyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.suM_HOBfc5Qe1cQYamICMU3oRa1_b1blyiHRwQT1bJY&amp;scopes=password.write%2Cscim.userids'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/check_token</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Authorization</span><span class="p">:</span> <span class="s">Basic YXBwOmFwcGNsaWVudHNlY3JldA==</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/x-www-form-urlencoded</span>
 
-token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJmMjY1Y2EzZi03MTQ1LTRhMjgtYWNiYS04YjFlNjQyZDk5ZDciLCJzdWIiOiIzMTJkOTY2MC0wZTIzLTRkN2ItODBjOC1mYmYzOGYyYzBkNTUiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMxMmQ5NjYwLTBlMjMtNGQ3Yi04MGM4LWZiZjM4ZjJjMGQ1NSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJhdXRoX3RpbWUiOjE0NTkyMDAxMDksInJldl9zaWciOiI4ZDFjMzNhYyIsImlhdCI6MTQ1OTIwMDEwOSwiZXhwIjoxNDU5MjQzMzA5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.6KOTBc5B4Qblg7OUn2Q_lMJEloDmPWbeh0ifHhzbslI&amp;scopes=password.write%2Cscim.userids
+token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJlNjBiMWYyNC0yOGEzLTQ3YjktOWFhOC00NGMzYmZkMmUxZTQiLCJzdWIiOiIyZTQwZDdkOS00NDJhLTRkNWQtOGQ2My00NTk0NTc2NjliY2EiLCJzY29wZSI6WyJzY2ltLnVzZXJpZHMiLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiXSwiY2xpZW50X2lkIjoiYXBwIiwiY2lkIjoiYXBwIiwiYXpwIjoiYXBwIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjJlNDBkN2Q5LTQ0MmEtNGQ1ZC04ZDYzLTQ1OTQ1NzY2OWJjYSIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Im1hcmlzc2EiLCJlbWFpbCI6Im1hcmlzc2FAdGVzdC5vcmciLCJhdXRoX3RpbWUiOjE0NTkyMTAzMTIsInJldl9zaWciOiI4NTBiOTVkYyIsImlhdCI6MTQ1OTIxMDMxMiwiZXhwIjoxNDU5MjUzNTEyLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImFwcCIsInNjaW0iLCJvcGVuaWQiLCJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiXX0.suM_HOBfc5Qe1cQYamICMU3oRa1_b1blyiHRwQT1bJY&amp;scopes=password.write%2Cscim.userids
 </code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
 <span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-cache, no-store, max-age=0, must-revalidate</span>
@@ -853,23 +1203,23 @@ token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJ
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">669</span>
 
 <span class="p">{</span><span class="w">
-  </span><span class="nt">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"312d9660-0e23-4d7b-80c8-fbf38f2c0d55"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"user_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2e40d7d9-442a-4d5d-8d63-459457669bca"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"user_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"marissa"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"marissa@test.org"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"client_id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"exp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459243309</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"exp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459253512</span><span class="p">,</span><span class="w">
   </span><span class="nt">"scope"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"scim.userids"</span><span class="p">,</span><span class="w"> </span><span class="s2">"openid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cloud_controller.read"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password.write"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cloud_controller.write"</span><span class="w"> </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"f265ca3f-7145-4a28-acba-8b1e642d99d7"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"jti"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"e60b1f24-28a3-47b9-9aa8-44c3bfd2e1e4"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"aud"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w"> </span><span class="s2">"scim"</span><span class="p">,</span><span class="w"> </span><span class="s2">"openid"</span><span class="p">,</span><span class="w"> </span><span class="s2">"cloud_controller"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="w"> </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"sub"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"312d9660-0e23-4d7b-80c8-fbf38f2c0d55"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"sub"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2e40d7d9-442a-4d5d-8d63-459457669bca"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"iss"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8080/uaa/oauth/token"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"iat"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200109</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"iat"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210312</span><span class="p">,</span><span class="w">
   </span><span class="nt">"cid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"grant_type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"azp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"app"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"auth_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200109</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"auth_time"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210312</span><span class="p">,</span><span class="w">
   </span><span class="nt">"zid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"rev_sig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"8d1c33ac"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"rev_sig"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"850b95dc"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"origin"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1058,7 +1408,7 @@ token=eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJ
 
 <p>An identity zone is created using a <code class="prettyprint">POST</code> with an <code class="prettyprint">IdentityZone</code> object. If the object contains an id, this id will be used as the identifier, otherwise an identifier will be generated. Once a zone has been created, the UAA will start accepting requests on the subdomain defined in the <code class="prettyprint">subdomain</code> field of the identity zone.
 When an Identity Zone is created, an internal Identity Provider is automatically created with the default password policy.</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones'</span> -i -X POST -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0Y2Q3NWE4Mi1jNGZmLTQ5NGMtYTkwOC1lODI1MTdmZjEzYTMiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxYjQ0YmNmZiIsImlhdCI6MTQ1OTIwMDEyNCwiZXhwIjoxNDU5MjQzMzI0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.b8HaC_b3b-U3so66uIhJSOhe7YPGV91HaDb7w3RQHMM'</span> -H <span class="s1">'Content-Type: application/json'</span> -d <span class="s1">'{
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones'</span> -i -X POST -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiZDAzYTY1MC0xNTk5LTQwYmQtYjdjOS01YmM4ZDFjNDEwYTIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIzZWZjYWEzNCIsImlhdCI6MTQ1OTIxMDMyNiwiZXhwIjoxNDU5MjUzNTI2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.9mUn-ELloB9HLsIZWsoySxHDqZKcbhzbPI23EpAMjsU'</span> -H <span class="s1">'Content-Type: application/json'</span> -d <span class="s1">'{
   "id" : "twiglet-create",
   "subdomain" : "twiglet-create",
   "config" : {
@@ -1112,12 +1462,12 @@ When an Identity Zone is created, an internal Identity Provider is automatically
   "name" : "The Twiglet Zone",
   "version" : 0,
   "description" : "Like the Twilight Zone but tastier.",
-  "created" : 1459200124653,
-  "last_modified" : 1459200124653
+  "created" : 1459210326488,
+  "last_modified" : 1459210326488
 }'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">POST</span> <span class="nn">/identity-zones</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI0Y2Q3NWE4Mi1jNGZmLTQ5NGMtYTkwOC1lODI1MTdmZjEzYTMiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxYjQ0YmNmZiIsImlhdCI6MTQ1OTIwMDEyNCwiZXhwIjoxNDU5MjQzMzI0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.b8HaC_b3b-U3so66uIhJSOhe7YPGV91HaDb7w3RQHMM</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiZDAzYTY1MC0xNTk5LTQwYmQtYjdjOS01YmM4ZDFjNDEwYTIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIzZWZjYWEzNCIsImlhdCI6MTQ1OTIxMDMyNiwiZXhwIjoxNDU5MjUzNTI2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.9mUn-ELloB9HLsIZWsoySxHDqZKcbhzbPI23EpAMjsU</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1439</span>
@@ -1176,8 +1526,8 @@ When an Identity Zone is created, an internal Identity Provider is automatically
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but tastier."</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124653</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124653</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326488</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326488</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">201</span> <span class="ne">Created</span>
@@ -1244,8 +1594,8 @@ When an Identity Zone is created, an internal Identity Provider is automatically
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but tastier."</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124666</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124666</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326502</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326502</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1498,10 +1848,10 @@ uaac token decode
 </code></pre>
 
 <h2 id="retrieving-an-identity-zone">Retrieving an identity zone</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-get'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1MTE5MTFjOC01MTdjLTQ2NTAtOWU5Yi04YTFjNDgwMTAyMTkiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjFiNDRiY2ZmIiwiaWF0IjoxNDU5MjAwMTI0LCJleHAiOjE0NTkyNDMzMjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.quR1NdtNQjucaE7AQkmdgQ_1CH2d1XdhzJv1lMBjvqk'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-get'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI4MjNmZjIzOS05YjQwLTQ2NmItYjdmZi01OTI4YTI5N2NmNDYiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjNlZmNhYTM0IiwiaWF0IjoxNDU5MjEwMzI2LCJleHAiOjE0NTkyNTM1MjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.9KmoKRjQ_pVomZcNQpdM1k7OVHWEXrFMVVrGYImgHEc'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/identity-zones/twiglet-get</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI1MTE5MTFjOC01MTdjLTQ2NTAtOWU5Yi04YTFjNDgwMTAyMTkiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjFiNDRiY2ZmIiwiaWF0IjoxNDU5MjAwMTI0LCJleHAiOjE0NTkyNDMzMjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.quR1NdtNQjucaE7AQkmdgQ_1CH2d1XdhzJv1lMBjvqk</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI4MjNmZjIzOS05YjQwLTQ2NmItYjdmZi01OTI4YTI5N2NmNDYiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjNlZmNhYTM0IiwiaWF0IjoxNDU5MjEwMzI2LCJleHAiOjE0NTkyNTM1MjYsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.9KmoKRjQ_pVomZcNQpdM1k7OVHWEXrFMVVrGYImgHEc</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
 </code></pre>
@@ -1564,8 +1914,8 @@ uaac token decode
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124538</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124538</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326350</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326350</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1782,10 +2132,10 @@ uaac token decode
 </tbody></table>
 
 <h2 id="retrieving-all-identity-zones">Retrieving all identity zones</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI5MGZkYTJhMC1hNTQ0LTQ5NDctYTU5ZC02MjY5YTc4MjMyZmIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjFiNDRiY2ZmIiwiaWF0IjoxNDU5MjAwMTI0LCJleHAiOjE0NTkyNDMzMjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.OlU04xxJ_9vnyTN5oU8buiQ99rPoVxTZAwPruC5bBqI'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones'</span> -i -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJhOWFkMmFlYS04N2M5LTQ5YWMtODQ5OS1jN2IwOTRjNTM2YjIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjNlZmNhYTM0IiwiaWF0IjoxNDU5MjEwMzI1LCJleHAiOjE0NTkyNTM1MjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.zTz_2Donf9GQNyCvxGlXXhQ_Ji25Oy4jFD5BBaG15tA'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">GET</span> <span class="nn">/identity-zones</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI5MGZkYTJhMC1hNTQ0LTQ5NDctYTU5ZC02MjY5YTc4MjMyZmIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjFiNDRiY2ZmIiwiaWF0IjoxNDU5MjAwMTI0LCJleHAiOjE0NTkyNDMzMjQsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.OlU04xxJ_9vnyTN5oU8buiQ99rPoVxTZAwPruC5bBqI</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJhOWFkMmFlYS04N2M5LTQ5YWMtODQ5OS1jN2IwOTRjNTM2YjIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMucmVhZCJdLCJjbGllbnRfaWQiOiJpZGVudGl0eSIsImNpZCI6ImlkZW50aXR5IiwiYXpwIjoiaWRlbnRpdHkiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjNlZmNhYTM0IiwiaWF0IjoxNDU5MjEwMzI1LCJleHAiOjE0NTkyNTM1MjUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC91YWEvb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiaWRlbnRpdHkiLCJ6b25lcyJdfQ.zTz_2Donf9GQNyCvxGlXXhQ_Ji25Oy4jFD5BBaG15tA</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
 </code></pre>
@@ -1848,8 +2198,8 @@ uaac token decode
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200123911</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200123911</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210325518</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210325518</span><span class="w">
 </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get-2"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"twiglet-get-2"</span><span class="p">,</span><span class="w">
@@ -1899,8 +2249,8 @@ uaac token decode
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200123976</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200123976</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210325599</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210325599</span><span class="w">
 </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"uaa"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"subdomain"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
@@ -1952,7 +2302,7 @@ uaac token decode
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The system zone for backwards compatibility"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">946684800000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200118965</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210321790</span><span class="w">
 </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
@@ -2149,7 +2499,7 @@ uaac token decode
 </tbody></table>
 
 <h2 id="updating-an-identity-zone">Updating an Identity Zone</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-update'</span> -i -X PUT -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiM2MwNGY5ZC0xODEyLTRiY2ItOGM5NC01MjRjMDEyZDAwYWYiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxYjQ0YmNmZiIsImlhdCI6MTQ1OTIwMDEyNCwiZXhwIjoxNDU5MjQzMzI0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.rE6Fj9ZRU5BvwwfkHkqGV2U_C3GvS528kB6EwbPXoVY'</span> -H <span class="s1">'Content-Type: application/json'</span> -d <span class="s1">'{
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-update'</span> -i -X PUT -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzYTIzOGNmYS1mNGYxLTRhZDktOWMwMS05ZWJlMmQ1OTAwYWIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIzZWZjYWEzNCIsImlhdCI6MTQ1OTIxMDMyNiwiZXhwIjoxNDU5MjUzNTI2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.NgkJFzZ1RbszRdRXBIGvILNacMOkQfwrPz__ZXNIVMc'</span> -H <span class="s1">'Content-Type: application/json'</span> -d <span class="s1">'{
   "subdomain" : "twiglet-update",
   "config" : {
     "tokenPolicy" : {
@@ -2202,12 +2552,12 @@ uaac token decode
   "name" : "The Updated Twiglet Zone",
   "version" : 0,
   "description" : "Like the Twilight Zone but not tastier.",
-  "created" : 1459200124392,
-  "last_modified" : 1459200124392
+  "created" : 1459210326175,
+  "last_modified" : 1459210326175
 }'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">PUT</span> <span class="nn">/identity-zones/twiglet-update</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJiM2MwNGY5ZC0xODEyLTRiY2ItOGM5NC01MjRjMDEyZDAwYWYiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxYjQ0YmNmZiIsImlhdCI6MTQ1OTIwMDEyNCwiZXhwIjoxNDU5MjQzMzI0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.rE6Fj9ZRU5BvwwfkHkqGV2U_C3GvS528kB6EwbPXoVY</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzYTIzOGNmYS1mNGYxLTRhZDktOWMwMS05ZWJlMmQ1OTAwYWIiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIzZWZjYWEzNCIsImlhdCI6MTQ1OTIxMDMyNiwiZXhwIjoxNDU5MjUzNTI2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.NgkJFzZ1RbszRdRXBIGvILNacMOkQfwrPz__ZXNIVMc</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 <span class="na">Content-Length</span><span class="p">:</span> <span class="s">1432</span>
@@ -2265,8 +2615,8 @@ uaac token decode
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Updated Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
   </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but not tastier."</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124392</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124392</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326175</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326175</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <pre class="highlight http"><code><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
@@ -2333,8 +2683,8 @@ uaac token decode
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Updated Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="nt">"description"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Like the Twilight Zone but not tastier."</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124382</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124411</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326160</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210326197</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -2735,10 +3085,10 @@ uaac token decode
 </tbody></table>
 
 <h2 id="deleting-an-identity-zone">Deleting an Identity Zone</h2>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-delete'</span> -i -X DELETE -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzMTBmZGIxYS1jODAwLTQ2Y2EtOTM2Yi1kNDM2ZTA3N2EwMmMiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxYjQ0YmNmZiIsImlhdCI6MTQ1OTIwMDEyNCwiZXhwIjoxNDU5MjQzMzI0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.LYUV0xFZ28JiubfN80wowx-hvWUVOM362Y4pjThxyEs'</span> -H <span class="s1">'Content-Type: application/json'</span>
+<pre class="highlight shell"><code><span class="gp">$ </span>curl <span class="s1">'http://localhost/identity-zones/twiglet-delete'</span> -i -X DELETE -H <span class="s1">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzM2U4MmViOS0yNDg2LTQ4ZjYtYjJiOS01ZjQ3ZDNlODY4MjAiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIzZWZjYWEzNCIsImlhdCI6MTQ1OTIxMDMyNSwiZXhwIjoxNDU5MjUzNTI1LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.qBrDmofzVbEbEtlPdbsLeBXgmI5VC_nlEF8Fcy1ULnQ'</span> -H <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
 <pre class="highlight http"><code><span class="nf">DELETE</span> <span class="nn">/identity-zones/twiglet-delete</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzMTBmZGIxYS1jODAwLTQ2Y2EtOTM2Yi1kNDM2ZTA3N2EwMmMiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIxYjQ0YmNmZiIsImlhdCI6MTQ1OTIwMDEyNCwiZXhwIjoxNDU5MjQzMzI0LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.LYUV0xFZ28JiubfN80wowx-hvWUVOM362Y4pjThxyEs</span>
+<span class="na">Authorization</span><span class="p">:</span> <span class="s">Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6ImxlZ2FjeS10b2tlbi1rZXkiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiIzM2U4MmViOS0yNDg2LTQ4ZjYtYjJiOS01ZjQ3ZDNlODY4MjAiLCJzdWIiOiJpZGVudGl0eSIsImF1dGhvcml0aWVzIjpbInpvbmVzLnJlYWQiLCJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJ6b25lcy53cml0ZSIsInNjaW0uem9uZXMiLCJ1YWEucmVzb3VyY2UiXSwic2NvcGUiOlsiem9uZXMud3JpdGUiXSwiY2xpZW50X2lkIjoiaWRlbnRpdHkiLCJjaWQiOiJpZGVudGl0eSIsImF6cCI6ImlkZW50aXR5IiwiZ3JhbnRfdHlwZSI6ImNsaWVudF9jcmVkZW50aWFscyIsInJldl9zaWciOiIzZWZjYWEzNCIsImlhdCI6MTQ1OTIxMDMyNSwiZXhwIjoxNDU5MjUzNTI1LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvdWFhL29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImlkZW50aXR5Iiwiem9uZXMiXX0.qBrDmofzVbEbEtlPdbsLeBXgmI5VC_nlEF8Fcy1ULnQ</span>
 <span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">localhost</span>
 
@@ -2802,8 +3152,8 @@ uaac token decode
   </span><span class="p">},</span><span class="w">
   </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"The Twiglet Zone"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"version"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124190</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459200124190</span><span class="w">
+  </span><span class="nt">"created"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210325835</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"last_modified"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1459210325835</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
