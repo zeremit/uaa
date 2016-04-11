@@ -952,16 +952,15 @@ public class UaaTokenServices implements AuthorizationServerTokenServices, Resou
 
         Authentication userAuthentication = null;
         // Is this a user token?
-        if (claims.containsKey(EMAIL)) {
+        if (claims.containsKey(USER_ID)) {
             UaaUser user = userDatabase.retrieveUserById((String)claims.get(USER_ID));
             UaaPrincipal principal = new UaaPrincipal(user);
             userAuthentication = new UaaAuthentication(principal, UaaAuthority.USER_AUTHORITIES, null);
-        }
-        else {
+        } else {
             authorizationRequest.setAuthorities(authorities);
         }
 
-        OAuth2Authentication authentication = new OAuth2Authentication(authorizationRequest.createOAuth2Request(), userAuthentication);
+        OAuth2Authentication authentication = new UaaOauth2Authentication(IdentityZoneHolder.get().getId(), authorizationRequest.createOAuth2Request(), userAuthentication);
         authentication.setAuthenticated(true);
         return authentication;
     }
