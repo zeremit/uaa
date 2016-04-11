@@ -952,7 +952,7 @@ public class UaaTokenServices implements AuthorizationServerTokenServices, Resou
 
         Authentication userAuthentication = null;
         // Is this a user token?
-        if (claims.containsKey(USER_ID)) {
+        if (claims.containsKey(EMAIL)) {
             UaaUser user = userDatabase.retrieveUserById((String)claims.get(USER_ID));
             UaaPrincipal principal = new UaaPrincipal(user);
             userAuthentication = new UaaAuthentication(principal, UaaAuthority.USER_AUTHORITIES, null);
