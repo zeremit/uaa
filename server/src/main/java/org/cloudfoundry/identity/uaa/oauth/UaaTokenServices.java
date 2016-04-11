@@ -960,7 +960,10 @@ public class UaaTokenServices implements AuthorizationServerTokenServices, Resou
             authorizationRequest.setAuthorities(authorities);
         }
 
-        OAuth2Authentication authentication = new UaaOauth2Authentication(IdentityZoneHolder.get().getId(), authorizationRequest.createOAuth2Request(), userAuthentication);
+        OAuth2Authentication authentication = new UaaOauth2Authentication(accessToken,
+                                                                          IdentityZoneHolder.get().getId(),
+                                                                          authorizationRequest.createOAuth2Request(),
+                                                                          userAuthentication);
         authentication.setAuthenticated(true);
         return authentication;
     }
