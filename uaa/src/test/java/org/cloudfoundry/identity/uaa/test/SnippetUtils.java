@@ -67,8 +67,14 @@ public final class SnippetUtils {
             }
 
             Attributes.Attribute[] attrs = new Attributes.Attribute[] {key("constraints").value(hasText(defaultValueText) ? "Optional (defaults to `" + defaultValueText + "`)" : "Optional")};
-            return (ConstrainableField)attributes(attrs);
+            return (ConstrainableField)attributes(attrs).optional();
         }
+
+        public FieldDescriptor requiredIf(String condition) {
+            Attributes.Attribute[] attrs = new Attributes.Attribute[] { key("constraints").value("Required if " + condition + " is included.")};
+            return attributes(attrs).optional();
+        }
+
         public ConstrainableField type(JsonFieldType fieldType) {
             return (ConstrainableField)attributes(type.value(fieldType));
         }
