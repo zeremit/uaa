@@ -17,11 +17,13 @@ import org.cloudfoundry.identity.uaa.zone.IdentityZoneHolder;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders;
 import org.springframework.restdocs.request.ParameterDescriptor;
 import org.springframework.restdocs.snippet.Snippet;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.oauth2.common.OAuth2RefreshToken;
 import org.springframework.security.oauth2.common.util.RandomValueStringGenerator;
+import org.springframework.security.oauth2.provider.client.BaseClientDetails;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
@@ -31,8 +33,10 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.Arrays;
 
+import static org.cloudfoundry.identity.uaa.mock.util.MockMvcUtils.*;
 import static org.cloudfoundry.identity.uaa.mock.util.MockMvcUtils.utils;
 import static org.cloudfoundry.identity.uaa.test.SnippetUtils.parameterWithName;
+import static org.hamcrest.Matchers.containsString;
 import static org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.restdocs.headers.HeaderDocumentation.headerWithName;
@@ -44,6 +48,7 @@ import static org.springframework.restdocs.operation.preprocess.Preprocessors.pr
 import static org.springframework.restdocs.payload.JsonFieldType.STRING;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
+import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.restdocs.request.RequestDocumentation.requestParameters;
 import static org.springframework.security.oauth2.common.util.OAuth2Utils.CLIENT_ID;
 import static org.springframework.security.oauth2.common.util.OAuth2Utils.GRANT_TYPE;
@@ -51,6 +56,7 @@ import static org.springframework.security.oauth2.common.util.OAuth2Utils.REDIRE
 import static org.springframework.security.oauth2.common.util.OAuth2Utils.RESPONSE_TYPE;
 import static org.springframework.security.oauth2.common.util.OAuth2Utils.STATE;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class TokenEndpointDocs extends InjectedMockContextTest {
@@ -66,7 +72,7 @@ public class TokenEndpointDocs extends InjectedMockContextTest {
     @Test
     public void getTokenUsingAuthCodeGrant() throws Exception {
         createUser();
-        String cfAccessToken = utils().getUserOAuthAccessToken(
+        String cfAccessToken = getUserOAuthAccessToken(
             getMockMvc(),
             "cf",
             "",
@@ -273,7 +279,7 @@ public class TokenEndpointDocs extends InjectedMockContextTest {
         MockHttpSession session = new MockHttpSession();
         session.setAttribute(
             HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
-            new MockMvcUtils.MockSecurityContext(principal)
+            new MockSecurityContext(principal)
         );
 
         MockHttpServletRequestBuilder get = get("/passcode")
@@ -374,14 +380,14 @@ public class TokenEndpointDocs extends InjectedMockContextTest {
         user = new ScimUser(null, new RandomValueStringGenerator().generate()+"@test.org", "name", "familyName");
         user.setPrimaryEmail(user.getUserName());
         user.setPassword("secr3T");
-        user = MockMvcUtils.utils().createUser(getMockMvc(), adminToken, user);
+        user = MockMvcUtils.createUser(getMockMvc(), adminToken, user);
         user.setPassword("secr3T");
     }
 
     @Test
     public void getIdTokenUsingAuthCodeGrant() throws Exception {
         createUser();
-        String cfAccessToken = utils().getUserOAuthAccessToken(
+        String cfAccessToken = getUserOAuthAccessToken(
             getMockMvc(),
             "cf",
             "",
@@ -439,5 +445,92 @@ public class TokenEndpointDocs extends InjectedMockContextTest {
 
         getMockMvc().perform(postForToken)
             .andDo(document("{ClassName}/{methodName}", preprocessResponse(prettyPrint()), requestParameters, responseFields));
+    }
+
+    @Test
+    public void revokeAllTokens_forAUser() throws Exception {
+        BaseClientDetails client = new BaseClientDetails(
+                new RandomValueStringGenerator().generate(),
+                "",
+                "openid",
+                "client_credentials,password",
+                "clients.read");
+        client.setClientSecret("secret");
+
+        String adminToken =  getClientCredentialsOAuthAccessToken(
+                getMockMvc(),
+                "admin",
+                "adminsecret",
+                "",
+                null
+        );
+        createUser();
+        createClient(getMockMvc(), adminToken, client);
+
+        String userInfoToken = getUserOAuthAccessToken(
+                getMockMvc(),
+                client.getClientId(),
+                client.getClientSecret(),
+                user.getUserName(),
+                user.getPassword(),
+                ""
+        );
+
+        Snippet requestHeaders = requestHeaders(headerWithName("Authorization").description(""));
+        Snippet pathParameters = pathParameters(parameterWithName("userId").description("The identifier for the user to revoke all tokens for"));
+        MockHttpServletRequestBuilder get = RestDocumentationRequestBuilders.get("/oauth/token/revoke/user/{userId}", user.getId());
+
+        getMockMvc().perform(get
+                        .header("Authorization", "Bearer "+adminToken))
+                        .andExpect(status().isOk())
+                        .andDo(document("{ClassName}/{methodName}", preprocessResponse(prettyPrint()), requestHeaders, pathParameters));
+
+        getMockMvc().perform(
+                get("/oauth/clients")
+                        .header("Authorization", "Bearer "+userInfoToken))
+                .andExpect(status().isUnauthorized())
+                .andExpect(content().string(containsString("\"error\":\"invalid_token\"")));
+    }
+
+    @Test
+    public void revokeAllTokens_forAClient() throws Exception {
+        BaseClientDetails client = new BaseClientDetails(
+                new RandomValueStringGenerator().generate(),
+                "",
+                "openid",
+                "client_credentials,password",
+                "clients.read");
+        client.setClientSecret("secret");
+
+        String adminToken =  getClientCredentialsOAuthAccessToken(
+                getMockMvc(),
+                "admin",
+                "adminsecret",
+                "",
+                null
+        );
+        createClient(getMockMvc(), adminToken, client);
+
+        String readClientsToken =
+                getClientCredentialsOAuthAccessToken(
+                        getMockMvc(),
+                        client.getClientId(),
+                        client.getClientSecret(),
+                        null,
+                        null
+                );
+        Snippet requestHeaders = requestHeaders(headerWithName("Authorization").description(""));
+        Snippet pathParameters = pathParameters(parameterWithName("clientId").description("The identifier for the client to revoke all tokens for"));
+        MockHttpServletRequestBuilder get = RestDocumentationRequestBuilders.get("/oauth/token/revoke/client/{clientId}", client.getClientId());
+        getMockMvc().perform(get
+                .header("Authorization", "Bearer "+ adminToken))
+                .andExpect(status().isOk())
+                .andDo(document("{ClassName}/{methodName}", preprocessResponse(prettyPrint()), requestHeaders, pathParameters));
+
+        getMockMvc().perform(
+                get("/oauth/clients")
+                .header("Authorization", "Bearer "+readClientsToken))
+                .andExpect(status().isUnauthorized())
+                .andExpect(content().string(containsString("\"error\":\"invalid_token\"")));
     }
 }
