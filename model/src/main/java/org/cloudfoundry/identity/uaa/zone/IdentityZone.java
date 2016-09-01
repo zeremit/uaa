@@ -35,7 +35,7 @@ public class IdentityZone {
         uaa.setId(OriginKeys.UAA);
         uaa.setName(OriginKeys.UAA);
         uaa.setDescription("The system zone for backwards compatibility");
-        uaa.setSubdomain("");
+        uaa.setSubdomain(OriginKeys.UAA);
         return uaa;
     }
 

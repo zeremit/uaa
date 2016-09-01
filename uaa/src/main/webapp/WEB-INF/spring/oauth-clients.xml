@@ -62,28 +62,28 @@
                         <map>
                             <entry key="authorized-grant-types" value="implicit,password,refresh_token" />
                             <entry key="scope"
-                                value="uaa.user,cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,cloud_controller.admin,scim.read,scim.write" />
+                                value="uaa.user,cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,cloud_controller.admin,scim.read,scim.write,zones.write" />
                             <entry key="authorities" value="uaa.none" />
                             <entry key="autoapprove" value="true" />
                         </map>
                     </entry>
-                    <entry key="app">
-                        <map>
-                            <entry key="secret" value="appclientsecret" />
-                            <entry key="authorized-grant-types" value="password,implicit,authorization_code,client_credentials" />
-                            <entry key="scope"
-                                value="cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,organizations.acme" />
-                            <entry key="authorities" value="uaa.resource" />
-                            <entry key="autoapprove">
-                                <list>
-                                    <value>openid</value>
-                                </list>
-                            </entry>
-                            <entry key="signup_redirect_url" value="http://localhost:8080/app/" />
-                            <entry key="change_email_redirect_url" value="http://localhost:8080/app/" />
-                            <entry key="name" value="The Ultimate Oauth App" />
-                        </map>
-                    </entry>
+                    <!--<entry key="newapp">-->
+                        <!--<map>-->
+                            <!--<entry key="secret" value="appclientsecret" />-->
+                            <!--<entry key="authorized-grant-types" value="password,implicit,authorization_code,client_credentials" />-->
+                            <!--<entry key="scope"-->
+                                <!--value="cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,organizations.acme" />-->
+                            <!--<entry key="authorities" value="uaa.resource" />-->
+                            <!--<entry key="autoapprove">-->
+                                <!--<list>-->
+                                    <!--<value>openid</value>-->
+                                <!--</list>-->
+                            <!--</entry>-->
+                            <!--&lt;!&ndash;<entry key="signup_redirect_url" value="http://localhost:8080/app/" />&ndash;&gt;-->
+                            <!--&lt;!&ndash;<entry key="change_email_redirect_url" value="http://localhost:8080/app/" />&ndash;&gt;-->
+                            <!--<entry key="name" value="The Ultimate Oauth App" />-->
+                        <!--</map>-->
+                    <!--</entry>-->
                     <entry key="login">
                         <map>
                             <entry key="secret" value="loginsecret" />
