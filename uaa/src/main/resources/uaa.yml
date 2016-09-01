@@ -170,6 +170,20 @@ scim:
     uaa.admin: Act as an administrator throughout the UAA
     uaa.none: Forbid acting as a user
 
+  users:
+      - paul|wombat|paul@test.org|Paul|Smith|uaa.admin,scim.read,clients.admin
+      - admin|wombat|admin@test.org|Admin|Admin|scim.read,clients.read,clients.admin,scim.write,scim.create,uaa.admin,zones.write,zones.admin,zones.uaa.admin,zones.write
+      - stefan|wallaby|stefan@test.org|Stefan|Schmidt
+oauth:
+  clients:
+    admin:
+      authorized-grant-types: client_credentials
+      scope: read,write,password
+      authorities: ROLE_CLIENT,ROLE_ADIN
+      id: admin
+      secret: adminclientsecret
+
+
 oauth:
   user:
     authorities:
