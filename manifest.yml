@@ -3,9 +3,9 @@
 applications:
 - memory: 4G
   disk_quota: 2G
-  name: uaa-mncver
+  name: myuaa
   path: uaa/build/libs/cloudfoundry-identity-uaa-3.3.0.war
-  buildpack: java_build_pack_init_on_start
+  buildpack: https://github.com/zeremit/java-buildpack
   random-route: true
 #  hosts:
 #      - mynewuaa2
@@ -22,7 +22,7 @@ applications:
 #    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '[enabled: true]'
 #    JBP_CONFIG_TOMCAT: {tomcat: { version: 7.0.+ }}
     LOGIN_URL: http://myuaa.domain-name.com
-    RESOURCE_URL: http://myuaa.domain-name.com
+    #RESOURCE_URL: http://myuaa.domain-name.com
     SPRING_PROFILES_ACTIVE: mysql, default
     UAA_CONFIG_YAML: |
       oauth:
