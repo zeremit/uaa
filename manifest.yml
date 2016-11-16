@@ -7,64 +7,7 @@ applications:
   path: uaa/build/libs/cloudfoundry-identity-uaa-3.3.0.war
   buildpack: https://github.com/zeremit/java-buildpack
   random-route: true
-#  hosts:
-#      - mynewuaa2
   timeout: 180
-  oauth:
-    clients:
-      login2:
-        name: Client Name1
-        secret: loginsecret
-        scope: openid, oauth.approvals
-        authorized-grant-types: client_credentials,authorization_code
-        authorities: oauth.login
   env:
-#    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '[enabled: true]'
-#    JBP_CONFIG_TOMCAT: {tomcat: { version: 7.0.+ }}
-    LOGIN_URL: http://myuaa.domain-name.com
-    #RESOURCE_URL: http://myuaa.domain-name.com
+    LOGIN_URL: http://mytestuaa.cf-dev.altoros.com
     SPRING_PROFILES_ACTIVE: mysql, default
-    UAA_CONFIG_YAML: |
-      oauth:
-        clients:
-          app:
-            scope: cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,organizations.acme,zones.write,uaa.admin
-            authorities: uaa.resource
-            secret: appclientsecret
-            authorized-grant-types: password,implicit,authorization_code,client_credentials
-            signup_redirect_url: http://mynewapp.domain-name.com/
-            change_email_redirect_url: http://mynewapp.domain-name.com/
-            name: The Ultimate Oauth App
-          export:
-            scope: cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,organizations.acme
-            authorities: uaa.resource
-            secret: appclientsecret
-            authorized-grant-types: password,implicit,authorization_code,client_credentials
-            signup_redirect_url: http://export-boot-auth.domain-name.com/
-            change_email_redirect_url: http://export-boot-auth.domain-name.com/
-            name: export
-            autoapprove: true
-          export-local:
-            scope: cloud_controller.read,cloud_controller.write,openid,password.write,scim.userids,organizations.acme
-            authorities: uaa.resource
-            secret: appclientsecret
-            authorized-grant-types: password,implicit,authorization_code,client_credentials
-            signup_redirect_url: http://localhost:8080/
-            change_email_redirect_url: http://localhost:8080/
-            name: export-local
-          admin:
-            authorized-grant-types: client_credentials
-            scope: uaa.none
-            authorities: uaa.admin,clients.read,clients.write,clients.secret,scim.read,scim.write,clients.admin
-            secret: adminsecret
-        client:
-          autoapprove:
-            - export
-#      uaa.scim.users:
-#       - admin|wombat|admin@test.org|Paul|Smith|uaa.admin,scim.read,clients.admin
-#       - paul|wombat|paul@test.org|Paul|Smith|uaa.admin,scim.read,clients.admin
-#      uaa:
-#        scim:
-#          users:
-#          - admin|wombat|admin@test.org|Paul|Smith|uaa.admin,scim.read,clients.admin
-#          - paul|wombat|paul@test.org|Paul|Smith|uaa.admin,scim.read,clients.admin
