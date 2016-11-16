@@ -9,5 +9,5 @@ applications:
   random-route: true
   timeout: 180
   env:
-    LOGIN_URL: http://mytestuaa.cf-dev.altoros.com
+    LOGIN_URL: http://myuaa.domain-name.com
     SPRING_PROFILES_ACTIVE: mysql, default
